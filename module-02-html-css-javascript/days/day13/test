@@ -1,0 +1,95 @@
+/* Define custom properties in :root */
+:root {
+  --primary-color: #1B4D8E;
+  --text-color: #FFFFFF;
+  --spacing-btn: 12px 24px;
+  --font-main: "Inter", system-ui, sans-serif;
+}
+
+/* Styled button using all four variables via var() */
+.btn {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  padding: var(--spacing-btn);
+  font-family: var(--font-main);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+
+/* 1. Default content-box behavior */
+.card-content-box {
+  box-sizing: content-box;
+  width: 300px;
+  padding: 24px;
+  border: 2px solid #333;
+  /* 
+    Rendered Width Calculation:
+    300px (width) + 24px (left padding) + 24px (right padding) 
+    + 2px (left border) + 2px (right border) 
+    = 352px total rendered width
+  */
+}
+
+
+.card-border-box {
+  box-sizing: border-box;
+  width: 300px;
+  padding: 24px;
+  border: 2px solid #333;
+ 
+}
+
+
+p { color: black; }           /* Element selector */
+.note { color: blue; }         /* Class selector */
+#lead { color: green; }        /* ID selector */
+
+
+
+<table class="flight-schedule">
+  <thead>
+    <tr>
+      <th>Flight No.</th>
+      <th>Origin</th>
+      <th>Destination</th>
+      <th>Departure</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>ET 302</td><td>Addis Ababa (ADD)</td><td>Nairobi (NBO)</td><td>08:15</td><td>On Time</td></tr>
+    <tr><td>ET 700</td><td>Addis Ababa (ADD)</td><td>London (LHR)</td><td>10:30</td><td>Boarding</td></tr>
+    <tr><td>ET 500</td><td>Addis Ababa (ADD)</td><td>Washington (IAD)</td><td>22:15</td><td>Scheduled</td></tr>
+    <tr><td>ET 608</td><td>Addis Ababa (ADD)</td><td>Bangkok (BKK)</td><td>23:55</td><td>Scheduled</td></tr>
+    <tr><td>ET 809</td><td>Addis Ababa (ADD)</td><td>Johannesburg (JNB)</td><td>08:40</td><td>On Time</td></tr>
+  </tbody>
+</table>
+
+
+/* CSS Styling */
+.flight-schedule {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: sans-serif;
+}
+
+/* Styled Header Row */
+.flight-schedule th {
+  background-color: #1B4D8E;
+  color: #ffffff;
+  text-align: left;
+  padding: 12px 16px; /* Comfortable cell padding */
+}
+
+/* Comfortable Padding for Body Cells */
+.flight-schedule td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* Zebra Striping using :nth-child(even) */
+.flight-schedule tbody tr:nth-child(even) {
+  background-color: #f7fafc;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    .page-layout {
+      display: grid;
+      min-height: 100vh;
+      /* Set desktop grid columns: Sidebar gets 200px, Main gets remaining space */
+      grid-template-columns: 200px 1fr;
+      grid-template-rows: auto 1fr auto;
+      /* Define structural layout visually using area names */
+      grid-template-areas:
+        "header  header"
+        "sidebar main"
+        "footer  footer";
+      gap: 0.5rem;
+    }
+
+    /* Assign HTML elements to specific named grid areas */
+    header  { grid-area: header; background: #3b82f6; padding: 1rem; color: white; }
+    aside   { grid-area: sidebar; background: #e2e8f0; padding: 1rem; }
+    main    { grid-area: main; background: #ffffff; padding: 1rem; }
+    footer  { grid-area: footer; background: #1e293b; padding: 1rem; color: white; }
+
+    /* Responsive Breakpoint: Under 700px, collapse layout to single column */
+    @media (max-width: 700px) {
+      .page-layout {
+        /* Reset to single-column layout */
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "header"
+          "sidebar"
+          "main"
+          "footer";
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-layout">
+    <header>Header</header>
+    <aside>Sidebar</aside>
+    <main>Main Content Area</main>
+    <footer>Footer</footer>
+  </div>
+</body>
+</html>

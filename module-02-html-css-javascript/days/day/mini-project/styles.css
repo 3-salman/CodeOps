@@ -1,0 +1,247 @@
+/* ==========================================================================
+   RESET & BASE STYLES
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f4f6f9;
+  color: #1f2937;
+}
+
+/* ==========================================================================
+   REQUIREMENT 1: GRID PAGE SKELETON WITH NAMED AREAS
+   ========================================================================== */
+.app {
+  display: grid;
+  min-height: 100vh;
+  /* Sidebar set to 260px, remaining space allocated to main content */
+  grid-template-columns: 260px 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header  header"
+    "sidebar main"
+    "footer  footer";
+}
+
+/* Assigning HTML elements to Grid Areas */
+.app-header  { grid-area: header; }
+.app-sidebar { grid-area: sidebar; }
+.app-main    { grid-area: main; }
+.app-footer  { grid-area: footer; }
+
+/* ==========================================================================
+   REQUIREMENT 4: STICKY HEADER
+   ========================================================================== */
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 100; /* Ensures header floats above main content while scrolling */
+  background-color: #005a9c; /* Ethio Telecom Blue */
+  color: #ffffff;
+  padding: 0.8rem 2rem;
+  
+  /* FLEXBOX COMPONENT: Top bar alignment */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.logo-accent {
+  color: #8bc53f; /* telebirr Green */
+}
+
+/* FLEXBOX COMPONENT: Nav Links & Profile */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+}
+
+.avatar {
+  width: 30px;
+  height: 30px;
+  background-color: #8bc53f;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/* ==========================================================================
+   REQUIREMENT 2: FLEXBOX SIDEBAR & TOOLBAR COMPONENTS
+   ========================================================================== */
+.app-sidebar {
+  background-color: #ffffff;
+  border-right: 1px solid #e5e7eb;
+  padding: 1.5rem 1rem;
+}
+
+/* FLEXBOX COMPONENT: Vertical Navigation Menu */
+.sidebar-menu {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sidebar-menu a {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: #4b5563;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.sidebar-menu li.active a,
+.sidebar-menu a:hover {
+  background-color: #e0f2fe;
+  color: #005a9c;
+}
+
+/* MAIN CONTENT LAYOUT */
+.app-main {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* FLEXBOX COMPONENT: Action Toolbar */
+.quick-actions-toolbar {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-primary { background-color: #8bc53f; color: #ffffff; }
+.btn-secondary { background-color: #e5e7eb; color: #374151; }
+
+/* ==========================================================================
+   REQUIREMENT 3: RESPONSIVE CARD GRID
+   ========================================================================== */
+.cards-grid {
+  display: grid;
+  /* Automatically adjusts column count dynamically based on width */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+.card {
+  /* REQUIREMENT 5: RELATIVE PARENT ANCHOR */
+  position: relative;
+  
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.card h3 {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-bottom: 0.5rem;
+}
+
+.card-value {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #111827;
+}
+
+.card-subtext {
+  font-size: 0.8rem;
+  color: #9ca3af;
+  margin-top: 0.5rem;
+  display: block;
+}
+
+/* ==========================================================================
+   REQUIREMENT 5: ABSOLUTELY POSITIONED BADGES
+   ========================================================================== */
+.badge {
+  /* Positioned absolutely relative to .card anchor */
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.7rem;
+  font-weight: bold;
+  border-radius: 12px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.badge-active { background-color: #10b981; }
+.badge-sale { background-color: #ef4444; }
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+.app-footer {
+  background-color: #1f2937;
+  color: #9ca3af;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.85rem;
+}
+
+/* ==========================================================================
+   REQUIREMENT 6: SINGLE MOBILE MEDIA QUERY (< 700px)
+   ========================================================================== */
+@media (max-width: 700px) {
+  .app {
+    /* Collapse desktop 2-column layout to a single column */
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "sidebar"
+      "main"
+      "footer";
+  }
+
+  .nav-links a {
+    display: none; /* Hide top links on mobile for simplicity */
+  }
+
+  .app-main {
+    padding: 1rem;
+  }
+}

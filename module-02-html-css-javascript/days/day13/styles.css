@@ -1,0 +1,146 @@
+/* 1. Global Variables */
+:root {
+  /* Color Palette (HSL) */
+  --color-primary: hsl(212, 68%, 33%);
+  --color-primary-hover: hsl(212, 68%, 45%);
+  --color-accent: hsl(42, 69%, 49%);
+  --color-text-main: hsl(215, 28%, 17%);
+  --color-text-muted: hsl(215, 16%, 47%);
+  --color-bg-card: hsl(0, 0%, 100%);
+  --color-bg-page: hsl(210, 40%, 96%);
+  --color-border: hsl(214, 32%, 91%);
+
+  /* Spacing Scale */
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 20px;
+  --space-lg: 32px;
+
+  /* Typography & Layout */
+  --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+  --radius-card: 12px;
+  --radius-btn: 6px;
+}
+
+/* 2. Global Reset & Body Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--color-bg-page);
+  color: var(--color-text-main);
+  line-height: 1.6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: var(--space-md);
+}
+
+/* 3. Profile Card Layout */
+.card {
+  position: relative;
+  background-color: var(--color-bg-card);
+  max-width: 380px;
+  width: 100%;
+  padding: var(--space-lg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  
+  /* Decorative pseudo-element accent bar at top of card */
+  overflow: hidden;
+}
+
+/* Pseudo-element 1: Top Accent Bar */
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: var(--color-primary);
+}
+
+/* 4. Content & Typography Hierarchy */
+.badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  letter-spacing: 0.5px;
+  margin-bottom: var(--space-xs);
+}
+
+.business-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-text-main);
+  line-height: 1.25;
+  margin-bottom: var(--space-xs);
+}
+
+.tagline {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.description {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-md);
+}
+
+/* Pseudo-element 2: Bullet indicator for TeleBirr */
+.payment-tag {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-md);
+}
+
+.payment-tag::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  margin-right: var(--space-xs);
+}
+
+/* 5. Button & States */
+.btn {
+  width: 100%;
+  background-color: var(--color-primary);
+  color: #ffffff;
+  font-family: var(--font-main);
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: var(--space-sm) var(--space-md);
+  border: none;
+  border-radius: var(--radius-btn);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+/* Hover state altering ONLY lightness via custom variable */
+.btn:hover {
+  background-color: var(--color-primary-hover);
+}
+
+/* Accessible focus state retained */
+.btn:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
+}

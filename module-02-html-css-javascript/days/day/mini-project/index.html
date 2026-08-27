@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ethio Telecom / telebirr Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- PAGE SKELETON (GRID CONTAINER) -->
+  <div class="app">
+
+    <!-- 1. HEADER (STICKY + FLEXBOX NAVBAR) -->
+    <header class="app-header">
+      <div class="logo">
+        <span class="logo-accent">tele</span>birr
+      </div>
+
+      <!-- Flexbox Component: Top Navbar Links & Profile -->
+      <nav class="nav-links">
+        <a href="#">Dashboard</a>
+        <a href="#">Services</a>
+        <a href="#">Support</a>
+        <div class="user-profile">
+          <div class="avatar">A</div>
+          <span>Abebe Bikila</span>
+        </div>
+      </nav>
+    </header>
+
+    <!-- 2. SIDEBAR (FLEXBOX NAVIGATION) -->
+    <aside class="app-sidebar">
+      <!-- Flexbox Component: Vertical Navigation -->
+      <ul class="sidebar-menu">
+        <li class="active"><a href="#">Overview</a></li>
+        <li><a href="#">My Airtime & Data</a></li>
+        <li><a href="#">Transaction History</a></li>
+        <li><a href="#">Bill Payment</a></li>
+        <li><a href="#">Settings</a></li>
+      </ul>
+    </aside>
+
+    <!-- 3. MAIN CONTENT AREA -->
+    <main class="app-main">
+      <section class="dashboard-header">
+        <h2>Account Overview</h2>
+        <p>Welcome back! Here is your real-time balance and usage.</p>
+      </section>
+
+      <!-- FLEXBOX TOOLBAR COMPONENT -->
+      <div class="quick-actions-toolbar">
+        <button class="btn btn-primary">Recharge Airtime</button>
+        <button class="btn btn-secondary">Buy Package</button>
+        <button class="btn btn-secondary">Send Money</button>
+      </div>
+
+      <!-- RESPONSIVE AUTO-FIT CARD GRID -->
+      <section class="cards-grid">
+
+        <!-- CARD 1 (WITH ABSOLUTE POSITIONED BADGE) -->
+        <div class="card">
+          <!-- Positioned Element: Relative Parent Anchor -->
+          <div class="badge badge-active">Active</div>
+          <h3>telebirr Balance</h3>
+          <p class="card-value">1,450.50 ETB</p>
+          <span class="card-subtext">Updated 5 mins ago</span>
+        </div>
+
+        <!-- CARD 2 (WITH ABSOLUTE POSITIONED BADGE) -->
+        <div class="card">
+          <div class="badge badge-sale">ETB Sale</div>
+          <h3>Data Package</h3>
+          <p class="card-value">14.2 GB</p>
+          <span class="card-subtext">Expires in 12 days</span>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="card">
+          <h3>Voice Minutes</h3>
+          <p class="card-value">320 Min</p>
+          <span class="card-subtext">National Calls</span>
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="card">
+          <h3>SMS Remaining</h3>
+          <p class="card-value">150 SMS</p>
+          <span class="card-subtext">Valid until end of month</span>
+        </div>
+
+      </section>
+    </main>
+
+    <!-- 4. FOOTER -->
+    <footer class="app-footer">
+      <p>&copy; 2026 Ethio Telecom / telebirr Dashboard Rebuild. Built for IBT College CodeOps Module 2.</p>
+    </footer>
+
+  </div>
+
+</body>
+</html>

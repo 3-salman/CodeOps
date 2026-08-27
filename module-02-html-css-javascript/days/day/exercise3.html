@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    .gallery {
+      display: grid;
+      /* auto-fit stretches tiles to fill leftover space automatically.
+         minmax(200px, 1fr) ensures columns are at least 200px wide, 
+         scaling up to 1fr to fill available row space */
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    .gallery-item {
+      height: 150px;
+      background-color: #475569;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+  <div class="gallery">
+    <div class="gallery-item">Image 1</div>
+    <div class="gallery-item">Image 2</div>
+    <div class="gallery-item">Image 3</div>
+    <div class="gallery-item">Image 4</div>
+    <div class="gallery-item">Image 5</div>
+    <div class="gallery-item">Image 6</div>
+  </div>
+</body>
+</html>

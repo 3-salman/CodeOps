@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h3>Ethio Telecom Registration Form</h3>
+    <form action="register" method="post">
+        <label for="name">name</label>
+        <input type="text" name="name"><br>
+
+        <label for="email">email</label>
+        <input type="email"><br>
+
+        <label for="tel">tel</label>
+        <input type="tel" pattern="\+251[0-9]{9}" placeholder="+2519...."><br>
+
+        <label for="branch">branch</label>
+        <select name="branch" >
+            <option value="Bole">Bole</option>
+            <option value="Kazanchis">Kazanchis</option>
+            <option value="Piassa">Piassa</option>
+        </select>
+
+        <button type="submit">submit</button>
+    </form>
+    <br>
+
+<table  border="1px">
+  <caption>Ethiopian Airlines Domestic & Regional Flight Schedule</caption>
+  <thead>
+    <tr>
+      <th scope="col">Flight</th>
+      <th scope="col">From</th>
+      <th scope="col">To</th>
+      <th scope="col">Departs</th>
+      <th scope="col">Price ETB</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">ET 102</th>
+      <td>Addis Ababa (ADD)</td>
+      <td>Lalibela (LLI)</td>
+      <td>07:30 AM</td>
+      <td>4,200</td>
+    </tr>
+    <tr>
+      <th scope="row">ET 204</th>
+      <td>Addis Ababa (ADD)</td>
+      <td>Dire Dawa (DIR)</td>
+      <td>09:15 AM</td>
+      <td>3,800</td>
+    </tr>
+    <tr>
+      <th scope="row">ET 310</th>
+      <td>Addis Ababa (ADD)</td>
+      <td>Bahir Dar (BJR)</td>
+      <td>11:00 AM</td>
+      <td>3,950</td>
+    </tr>
+    <tr>
+      <th scope="row">ET 402</th>
+      <td>Addis Ababa (ADD)</td>
+      <td>Gondar (GDQ)</td>
+      <td>02:20 PM</td>
+      <td>4,100</td>
+    </tr>
+    <tr>
+      <th scope="row">ET 508</th>
+      <td>Addis Ababa (ADD)</td>
+      <td>Mekelle (MQX)</td>
+      <td>04:45 PM</td>
+      <td>4,500</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+<section>
+  <h2>Landmark Location</h2>
+  
+  <figure>
+    <img src="lalibela.jpg" alt="Rock-hewn church of Bete Giyorgis carved into monolithic ground in Lalibela" width="640" height="420" loading="lazy">
+    <figcaption>Bete Giyorgis, one of the eleven historic rock-hewn churches of Lalibela.</figcaption>
+  </figure>
+
+  <iframe src="https://maps.example/embed?q=Bole,Addis+Ababa" title="Map showing location in Bole, Addis Ababa" width="100%" height="320" loading="lazy"></iframe>
+</section>
+
+
+<div class="button" onclick="submitForm()">Submit</div>
+<input type="text" placeholder="Enter your city">
+<img src="logo.png">
+
+
+</body>
+</html>

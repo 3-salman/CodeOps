@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        form{
+            border: 1px solid black;
+            
+        }
+        input{
+            border: 0px;
+        }
+    </style>
+</head>
+<body>
+    <h1>this is h1 element</h1>
+    <strong><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint suscipit eveniet repudiandae facere officiis cum dolorum sequi quae, minus, placeat porro beatae quod impedit distinctio molestias temporibus perspiciatis expedita tempore?</p></strong>
+    <em><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet quidem ad repellat, reiciendis accusantium qui laborum, eligendi sunt illo voluptatem consequuntur nulla pariatur dicta similique perferendis aut. Aperiam, qui rerum.</p></em>
+    <ul>
+        <li>coffee</li>
+        <li>injera</li>
+        <li>Kolo</li>
+    </ul>
+    <ol >
+        <li></li>
+    </ol>
+    
+    <nav>
+    <a href="secondpage.html">secondpage</a>
+    <a href="">google.com</a>
+    </nav>
+
+    <!-- <form action="" > -->
+    <label for="n" id="l4n">name</label>
+    <input type="text" id="n" name="name">
+        <br>
+     <label for="pwd">name</label>
+    <input type="password" id="pwd" name="password"><br>
+        <button type="submit" name="submit" value="loged" onclick="on()">login</button>
+    <!-- </form> -->
+
+    <script>
+        function on(){
+        document.getElementById("l4n").innerText="id";
+        const box= document.getElementsById("l4n");
+        // box.style.setProperty("border", "1px");
+        box.setProperty("border" , "1px");
+        }
+    </script>
+
+
+
+
+</body>
+</html>
