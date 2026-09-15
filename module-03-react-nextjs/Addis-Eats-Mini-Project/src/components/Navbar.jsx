@@ -1,9 +1,12 @@
 import { Link, NavLink } from 'react-router-dom'
-import { useCart } from '../context/CartContext.jsx'
-import { useState } from 'react'
+import  {CartContext}  from '../context/CartContext.jsx'
+import { useState ,useContext } from 'react'
 
 export default function Navbar() {
-  const { count } = useCart()
+  // const { count } = useContext(CartContext)
+  const  cart = useContext(CartContext)
+  const count=cart.length
+  
   const [isfavourite , favourite]= useState(true) // to render based on this
 
   return (
@@ -26,9 +29,9 @@ export default function Navbar() {
 
         <div className="nav__actions">
           <Link to="/cart">
-          <button className="iconbtn" aria-label={`Cart (20 items)`}>
+          <button className="iconbtn">      {/* aria-label={`Cart (20 items)`}> */}
             <img src="https://cdn-icons-png.flaticon.com/128/9219/9219671.png" alt="" />
-            <span className="iconbtn__badge">20</span>
+            <span className="iconbtn__badge">{count}</span>
           </button>
           </Link>
 

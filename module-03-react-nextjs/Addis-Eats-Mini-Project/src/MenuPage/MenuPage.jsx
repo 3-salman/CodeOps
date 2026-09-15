@@ -4,6 +4,7 @@ import { FavoritesContext } from '../context/FavoritesContext.jsx'
 import { useContext } from 'react'
 import Navbar from '../components/Navbar.jsx'
 import Footer from '../components/Footer.jsx'
+// import { CartContext } from '../context/useCartContext.jsx'
 
 const categories = ['All', 'Stews', 'Meat', 'Vegan', 'Bakery', 'Drinks', 'Desserts', 'Favorites']
 
@@ -108,7 +109,7 @@ const categories = ['All', 'Stews', 'Meat', 'Vegan', 'Bakery', 'Drinks', 'Desser
 function MenuPage() {
     const [activeCategory, setActiveCategory] = useState('All')
     const Favorites_item=useContext(FavoritesContext || [] );
-    const[favourites, setFavourites]=useState(Favorites_item || [] )
+    const[favourites, setFavourites]=useState([Favorites_item] || [] )
     const [data, setData]=useState([])
     const [isLoading, setLoading]=useState(false)
 
@@ -120,7 +121,7 @@ function MenuPage() {
       try {
         setLoading(true);
         // 2. Fetch from the public directory root
-        const response = await fetch('/menu.json');
+        const response = await fetch('menu.json');
         
         if (!response.ok) {
           // throw new Error(`HTTP error! status: ${response.status}`);
@@ -147,11 +148,24 @@ function MenuPage() {
     },[] )
 
 
+    function fa(){
+
+    }
+    // setTimeout(()=>,3000)
+    // const newdish=data.map(
+    //   item => item.id === favourites.id ? {...item , favorited:true} : {...item , favorited:false} 
+    // )
+    const newdish = data.map((item) => ({
+  ...item,
+  favorited: favourites.some((fav) => fav.id === item.id),
+}))
+      //  console.log(newdish.map(item=>item.favorited))
+
 
   const filteredDishes =
     activeCategory === 'All'
-      ? data
-      : activeCategory === 'Favorites'? favourites : data.filter((dish) => dish.category.toLowerCase()  === activeCategory.toLowerCase())
+      ? newdish
+      : activeCategory === 'Favorites'? favourites : newdish.filter((dish) => dish.category.toLowerCase()  === activeCategory.toLowerCase())
       
 
   return (
@@ -195,7 +209,7 @@ function MenuPage() {
         ) : (
           <div className="cards menu-page-cards">
             {filteredDishes.map((dish) => (
-              // <FavoritesContext.Provider value={{fav_item , setFavourites}}>
+              // <FavoritesContext.Provider value={{Favourites , setFavourites}}>
               <DishCard key={dish.id} dish={dish} />
               // </FavoritesContext.Provider>
             ))}

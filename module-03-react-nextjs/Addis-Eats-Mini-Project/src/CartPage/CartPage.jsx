@@ -1,5 +1,10 @@
-import React from 'react'
+import React, { useContext, useState } from 'react'
 import Navbar from '../components/Navbar'
+import  {CartContext}  from '../context/CartContext'
+import { Link } from 'react-router-dom'
+import CartCard from './CartCard'
+// import { useContext } from 'react'
+// import { useState } from 'react'
 
 const items = [
   {
@@ -39,7 +44,38 @@ const subtotal = items.reduce((sum, item) => sum + item.price * item.qty, 0)
 const total = subtotal + DELIVERY_FEE
 
 function CartPage() {
+  // const [ca]=useState(useContext(CartContext))
+  const [cart , setCart] = useState(useContext(CartContext)) //useCartContext() //useState(useContext(CartContext))
+  console.log("cart")
+  console.log(cart)
+
+  function addorsubtotal(op , id){
+      op == "add"?
+        setCart(
+          cart.map(
+            item =>item.id == id ? {...item , qty:item.qty + 1 } : item
+          )
+      ):
+      setCart(
+          cart.map(
+            item =>item.id == id ? item.qty == 1 ? item :{...item , qty:item.qty - 1 } : item
+          )
+      )
+        console.log(cart)
+
+        localStorage.setItem( "Cart" ,JSON.stringify(cart))
+  }
+  function remove(id){
+          setCart(
+            cart.filter(
+              item => item.id == id ? false : true 
+            )
+          )
+  }
+
+
   return (
+
     <div>
       <Navbar/>
     <div className="cart-page-wrapper">
@@ -51,46 +87,17 @@ function CartPage() {
           </h1>
         </div>
 
-        <div className="cart-page-layout">
-          <div className="cart-page-items">
-            {items.map((item) => (
-              <div className="cart-item" key={item.id}>
-                <div
-                  className="cart-item__media"
-                  style={{ '--c1': item.c1, '--c2': item.c2 }}
-                >
-                  <span className="cart-item__emoji">{item.emoji}</span>
-                </div>
-
-                <div className="cart-item__body">
-                  <div className="cart-item__head">
-                    <h3 className="cart-item__title">{item.name}</h3>
-                    <span className="cart-item__price">
-                      ${(item.price * item.qty).toFixed(2)}
-                    </span>
-                  </div>
-                  <p className="cart-item__desc">{item.desc}</p>
-
-                  <div className="cart-item__foot">
-                    <div className="qty-stepper">
-                      <button type="button" className="qty-stepper__btn" disabled>
-                        −
-                      </button>
-                      <span className="qty-stepper__val">{item.qty}</span>
-                      <button type="button" className="qty-stepper__btn" disabled>
-                        +
-                      </button>
-                    </div>
-
-                    <button type="button" className="cart-item__remove" disabled>
-                      Remove
-                    </button>
-                  </div>
-                </div>
-              </div>
+        
+          
+            <div className="cart-page-layout">
+           <div className="cart-page-items"></div>
+            {cart.map((item) => (
+                <CartCard key={item.id} item={item} addorsubtotal={addorsubtotal} remove={remove}/>
             ))}
-          </div>
+            
+            </div>
 
+          
           <aside className="cart-page-summary">
             <h3 className="cart-page-summary__title">Order Summary</h3>
 
@@ -114,14 +121,16 @@ function CartPage() {
               Proceed to Checkout
             </button>
 
-            <a href="#" className="link-arrow cart-page-continue">
+            <Link to="/menu" className="link-arrow cart-page-continue">
               ← Continue shopping
-            </a>
+            </Link>
           </aside>
+            
+
         </div>
       </div>
     </div>
-    </div>
+    
   )
 }
 

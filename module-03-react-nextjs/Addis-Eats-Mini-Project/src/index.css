@@ -703,7 +703,7 @@ button { font: inherit; cursor: pointer; }
   width: 90px;
   height: 90px;
   border-radius: 6px;
-  background: var(--c1, var(--primary));
+  background: var(--primary);
   display: flex;
   align-items: center;
   justify-content: center;
