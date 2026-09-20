@@ -44,10 +44,9 @@ const subtotal = items.reduce((sum, item) => sum + item.price * item.qty, 0)
 const total = subtotal + DELIVERY_FEE
 
 function CartPage() {
-  // const [ca]=useState(useContext(CartContext))
+  
   const [cart , setCart] = useState(useContext(CartContext)) //useCartContext() //useState(useContext(CartContext))
-  console.log("cart")
-  console.log(cart)
+
 
   function addorsubtotal(op , id){
       op == "add"?
@@ -62,9 +61,11 @@ function CartPage() {
           )
       )
         console.log(cart)
+        console.log("first")
 
         localStorage.setItem( "Cart" ,JSON.stringify(cart))
   }
+
   function remove(id){
           setCart(
             cart.filter(
@@ -91,13 +92,16 @@ function CartPage() {
           
             <div className="cart-page-layout">
            <div className="cart-page-items"></div>
-            {cart.map((item) => (
+            {Array.isArray(cart)? cart.map((item) => (
                 <CartCard key={item.id} item={item} addorsubtotal={addorsubtotal} remove={remove}/>
-            ))}
+            )):
+              cart? <CartCard key={cart.id} item={cart} addorsubtotal={addorsubtotal} remove={remove}/>
+              : <h1> empty cart</h1>
+            }
             
             </div>
 
-          
+          {cart && 
           <aside className="cart-page-summary">
             <h3 className="cart-page-summary__title">Order Summary</h3>
 
@@ -124,7 +128,7 @@ function CartPage() {
             <Link to="/menu" className="link-arrow cart-page-continue">
               ← Continue shopping
             </Link>
-          </aside>
+          </aside>}
             
 
         </div>

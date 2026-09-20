@@ -13,9 +13,7 @@ export default function SpecialsGrid() {
           </div>
 
           <Link to="/menu" className="link-arrow"> View full menu </Link>
-          {/* <a className="link-arrow" href="#">
-            View full menu
-          </a> */}
+          
         </div>
 
         <div className="cards">

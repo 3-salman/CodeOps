@@ -4,7 +4,9 @@ import LoginPage from './LoginPage/LoginPage.jsx'
 import CartPage from './CartPage/CartPage.jsx'
 import ProfilePage from './ProfilePage/ProfilePage.jsx'
 import MenuPage from './MenuPage/MenuPage.jsx'
-// import FavoritesPage from './FavoritesPage/FavoritesPage.jsx'
+import DetailMenu from './MenuPage/DishDetailPage.jsx'
+import Test from './MenuPage/test.jsx'
+import FavoritesPage from './FavoritesPage/FavoritesPage.jsx'
 import SignupPage from './SignupPage/SignupPage.jsx'
 import { createContext, useState } from 'react'
 import { FavoritesContext,  } from './context/FavoritesContext.jsx'
@@ -20,13 +22,15 @@ const t=1
   return (
     <>
       <main>
+        {/* <Routes>  //which children have to execute */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/cart" element={<CartPage />} />
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/menu" element={<MenuPage />} />
-          {/* <Route path="/favorites" element={<FavoritesPage />} /> */}
+          <Route path="/menudetail" element={<Test />} />
+          <Route path="/favorites" element={<FavoritesPage />} />
           <Route path="/signup" element={<SignupPage />} />
         </Routes>
       </main>

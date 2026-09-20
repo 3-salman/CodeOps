@@ -1,32 +1,13 @@
 import { createContext, useContext } from "react";
 
 
-// import React from 'react'
-
-// function useCartContext() {
-//     const cartContext=createContext(
-//     JSON.parse(localStorage.getItem("Cart")))
-
-//   return useContext(cartContext)
-// }
-
-// export default useCartContext
-
-export const CartContext=createContext(JSON.parse(localStorage.getItem("Cart"))
-);
-
-// cart=JSON.parse(localStorage.getItem("Cart"))
-// export  const CartContext=createContext({
-//         cart:cart,
-//         count:cart.length
-  
-//     }
-// );
-
-// export const useCart=useContext(CartContext)
 
 
-// console.log(useContext(CartContext))
+const cart_state= localStorage.getItem("Cart") ? JSON.parse( localStorage.getItem("Cart")) : null
+console.log(cart_state)
+
+  export const CartContext=createContext(cart_state);
+
 
 
 

@@ -5,7 +5,8 @@
     "price": 320,
     "category": "stews",
     "emoji": "🥘",
-    "description": "Slow-stewed chicken drumstick in a berbere-spiced sauce with hard-boiled egg and injera."
+    "description": "Slow-stewed chicken drumstick in a berbere-spiced sauce with hard-boiled egg and injera.",
+    "image": "/images/doro-wot.jpg"
   },
   {
     "id": "kitfo",
@@ -13,7 +14,8 @@
     "price": 380,
     "category": "meat",
     "emoji": "🥩",
-    "description": "Hand-minced lean beef seasoned with mitmita spice and herbed butter. Served rare, medium, or well-done."
+    "description": "Hand-minced lean beef seasoned with mitmita spice and herbed butter. Served rare, medium, or well-done.",
+    "image": "/images/kitfo.jpg"
   },
   {
     "id": "shiro",
@@ -21,7 +23,8 @@
     "price": 150,
     "category": "vegan",
     "emoji": "🌱",
-    "description": "Creamy chickpea flour stew slow-simmered with garlic, ginger, and a touch of berbere."
+    "description": "Creamy chickpea flour stew slow-simmered with garlic, ginger, and a touch of berbere.",
+    "image": "/images/shiro.jpg"
   },
   {
     "id": "baklava",
@@ -29,7 +32,8 @@
     "price": 90,
     "category": "desserts",
     "emoji": "🍮",
-    "description": "Layers of paper-thin filo, walnut, and honey syrup. A sweet finish to any meal."
+    "description": "Layers of paper-thin filo, walnut, and honey syrup. A sweet finish to any meal.",
+    "image": "/images/baklava.jpg"
   },
   {
     "id": "tibs",
@@ -37,7 +41,8 @@
     "price": 340,
     "category": "meat",
     "emoji": "🍖",
-    "description": "Pan-seared beef cubes sautéed with onion, rosemary, and green chili."
+    "description": "Pan-seared beef cubes sautéed with onion, rosemary, and green chili.",
+    "image": "/images/tibs.jpg"
   },
   {
     "id": "misir-wot",
@@ -45,7 +50,8 @@
     "price": 140,
     "category": "vegan",
     "emoji": "🍛",
-    "description": "Red lentils simmered in a rich berbere sauce until velvety soft."
+    "description": "Red lentils simmered in a rich berbere sauce until velvety soft.",
+    "image": "/images/misir-wot.jpg"
   },
   {
     "id": "gomen",
@@ -53,7 +59,8 @@
     "price": 130,
     "category": "vegan",
     "emoji": "🥬",
-    "description": "Collard greens slow-cooked with garlic, onion, and a hint of ginger."
+    "description": "Collard greens slow-cooked with garlic, onion, and a hint of ginger.",
+    "image": "/images/gomen.jpg"
   },
   {
     "id": "atkilt-wot",
@@ -61,7 +68,8 @@
     "price": 135,
     "category": "vegan",
     "emoji": "🥕",
-    "description": "Cabbage, carrots, and potatoes gently spiced with turmeric."
+    "description": "Cabbage, carrots, and potatoes gently spiced with turmeric.",
+    "image": "/images/atkilt-wot.jpg"
   },
   {
     "id": "beyainatu",
@@ -69,15 +77,17 @@
     "price": 260,
     "category": "vegan",
     "emoji": "🍽️",
-    "description": "A sampler platter of vegetarian stews and salads on injera."
+    "description": "A sampler platter of vegetarian stews and salads on injera.",
+    "image": "/images/beyainatu.jpg"
   },
   {
-    "id": "zilzil-tibs",
+    "id": "zil-tibzs",
     "title": "Zilzil Tibs",
     "price": 355,
     "category": "meat",
     "emoji": "🔥",
-    "description": "Thin strips of grilled beef tossed in a spiced awaze sauce."
+    "description": "Thin strips of grilled beef tossed in a spiced awaze sauce.",
+    "image": "/images/zil-tibzs.jpg"
   },
   {
     "id": "gored-gored",
@@ -85,7 +95,8 @@
     "price": 400,
     "category": "meat",
     "emoji": "🥩",
-    "description": "Cubed raw beef served with mitmita and niter kibbeh."
+    "description": "Cubed raw beef served with mitmita and niter kibbeh.",
+    "image": "/images/gored-gored.jpg"
   },
   {
     "id": "doro-tibs",
@@ -93,7 +104,8 @@
     "price": 300,
     "category": "meat",
     "emoji": "🍗",
-    "description": "Diced chicken sautéed with peppers, onion, and rosemary."
+    "description": "Diced chicken sautéed with peppers, onion, and rosemary.",
+    "image": "/images/doro-tibs.jpg"
   },
   {
     "id": "fish-goulash",
@@ -101,7 +113,8 @@
     "price": 310,
     "category": "stews",
     "emoji": "🐟",
-    "description": "Nile perch simmered in a mild berbere and tomato sauce."
+    "description": "Nile perch simmered in a mild berbere and tomato sauce.",
+    "image": "/images/fish-goulash.jpg"
   },
   {
     "id": "key-wot",
@@ -109,7 +122,8 @@
     "price": 290,
     "category": "stews",
     "emoji": "🌶️",
-    "description": "A fiery beef stew slow-cooked in a deep red berbere base."
+    "description": "A fiery beef stew slow-cooked in a deep red berbere base.",
+    "image": "/images/key-wot.jpg"
   },
   {
     "id": "alicha-wot",
@@ -117,7 +131,8 @@
     "price": 270,
     "category": "stews",
     "emoji": "🍲",
-    "description": "A gentle turmeric-spiced beef and potato stew, no berbere heat."
+    "description": "A gentle turmeric-spiced beef and potato stew, no berbere heat.",
+    "image": "/images/alicha-wot.jpg"
   },
   {
     "id": "injera-basket",
@@ -125,7 +140,8 @@
     "price": 40,
     "category": "bakery",
     "emoji": "🫓",
-    "description": "Fresh sourdough teff flatbread, baked daily. Extra pieces on request."
+    "description": "Fresh sourdough teff flatbread, baked daily. Extra pieces on request.",
+    "image": "/images/injera-basket.jpg"
   },
   {
     "id": "dabo",
@@ -133,7 +149,8 @@
     "price": 60,
     "category": "bakery",
     "emoji": "🍞",
-    "description": "Soft spiced Ethiopian bread, lightly sweet with a hint of cardamom."
+    "description": "Soft spiced Ethiopian bread, lightly sweet with a hint of cardamom.",
+    "image": "/images/dabo.jpg"
   },
   {
     "id": "ambasha",
@@ -141,7 +158,8 @@
     "price": 65,
     "category": "bakery",
     "emoji": "🥖",
-    "description": "Decoratively scored sweet bread flavored with cardamom and honey."
+    "description": "Decoratively scored sweet bread flavored with cardamom and honey.",
+    "image": "/images/ambasha.jpg"
   },
   {
     "id": "sambusa",
@@ -149,23 +167,8 @@
     "price": 55,
     "category": "meat",
     "emoji": "🥟",
-    "description": "Crispy fried pastry filled with spiced lentils or minced beef."
-  },
-  {
-    "id": "buticha",
-    "title": "Buticha",
-    "price": 120,
-    "category": "vegan",
-    "emoji": "🥗",
-    "description": "Chickpea salad blended with lime, jalapeño, and onion."
-  },
-  {
-    "id": "azifa",
-    "title": "Azifa",
-    "price": 110,
-    "category": "vegan",
-    "emoji": "🥗",
-    "description": "A cool green lentil salad with mustard, lime, and jalapeño."
+    "description": "Crispy fried pastry filled with spiced lentils or minced beef.",
+    "image": "/images/sambusa.jpg"
   },
   {
     "id": "kikil",
@@ -173,7 +176,8 @@
     "price": 330,
     "category": "meat",
     "emoji": "🍖",
-    "description": "Beef shank and trotters simmered in a light garlic-ginger broth."
+    "description": "Beef shank and trotters simmered in a light garlic-ginger broth.",
+    "image": "/images/kikil.jpg"
   },
   {
     "id": "dulet",
@@ -181,15 +185,8 @@
     "price": 260,
     "category": "meat",
     "emoji": "🌶️",
-    "description": "Minced tripe, liver, and beef sautéed with chili and herbed butter."
-  },
-  {
-    "id": "kurt",
-    "title": "Kurt",
-    "price": 420,
-    "category": "meat",
-    "emoji": "🥩",
-    "description": "Fresh raw beef cubes served simply with mustard and pepper."
+    "description": "Minced tripe, liver, and beef sautéed with chili and herbed butter.",
+    "image": "/images/dulet.jpg"
   },
   {
     "id": "chechebsa",
@@ -197,7 +194,8 @@
     "price": 95,
     "category": "bakery",
     "emoji": "🥞",
-    "description": "Shredded flatbread pan-fried in spiced butter and berbere."
+    "description": "Shredded flatbread pan-fried in spiced butter and berbere.",
+    "image": "/images/chechebsa.jpg"
   },
   {
     "id": "genfo",
@@ -205,7 +203,8 @@
     "price": 100,
     "category": "bakery",
     "emoji": "🍚",
-    "description": "A warm barley porridge served with a well of spiced butter."
+    "description": "A warm barley porridge served with a well of spiced butter.",
+    "image": "/images/genfo.jpg"
   },
   {
     "id": "buna",
@@ -213,23 +212,18 @@
     "price": 45,
     "category": "drinks",
     "emoji": "☕",
-    "description": "Traditionally brewed jebena coffee, roasted fresh to order."
+    "description": "Traditionally brewed jebena coffee, roasted fresh to order.",
+    "image": "/images/buna.jpg"
   },
-  {
-    "id": "tej",
-    "title": "Tej",
-    "price": 90,
-    "category": "drinks",
-    "emoji": "🍯",
-    "description": "Honey wine served chilled, sweet with a gentle fermented edge."
-  },
+  
   {
     "id": "spris",
     "title": "Spris Juice",
     "price": 80,
     "category": "drinks",
     "emoji": "🥤",
-    "description": "Layered fresh fruit juice — mango, avocado, and papaya."
+    "description": "Layered fresh fruit juice — mango, avocado, and papaya.",
+    "image": "/images/spris.jpg"
   },
   {
     "id": "macchiato",
@@ -237,23 +231,36 @@
     "price": 50,
     "category": "drinks",
     "emoji": "☕",
-    "description": "Espresso topped with a small amount of frothed milk, Italian-influenced."
+    "description": "Espresso topped with a small amount of frothed milk, Italian-influenced.",
+    "image": "/images/macchiato.jpg"
   },
   {
-    "id": "tella",
-    "title": "Tella",
-    "price": 70,
+    "id": "honey-tea",
+    "title": "Honey Tea",
+    "price": 55,
     "category": "drinks",
-    "emoji": "🍺",
-    "description": "A traditional lightly fermented homemade beer."
+    "emoji": "🍯",
+    "description": "Black tea brewed with honey and a touch of ginger.",
+    "image": "/images/honey-tea.jpg"
   },
+  {
+    "id": "spiced-milk",
+    "title": "Spiced Milk",
+    "price": 60,
+    "category": "drinks",
+    "emoji": "🥛",
+    "description": "Warm milk infused with cardamom, cinnamon, and a hint of nutmeg.",
+    "image": "/images/spiced-milk.jpg"
+  },
+  
   {
     "id": "himbasha-cake",
     "title": "Himbasha Cake Slice",
     "price": 75,
     "category": "desserts",
     "emoji": "🍰",
-    "description": "A slice of sweet celebration bread, lightly spiced and soft."
+    "description": "A slice of sweet celebration bread, lightly spiced and soft.",
+    "image": "/images/himbasha-cake.jpg"
   },
   {
     "id": "fruit-salad",
@@ -261,7 +268,8 @@
     "price": 85,
     "category": "desserts",
     "emoji": "🍓",
-    "description": "Seasonal mixed fruit lightly dressed with honey and lime."
+    "description": "Seasonal mixed fruit lightly dressed with honey and lime.",
+    "image": "/images/fruit-salad.jpg"
   },
   {
     "id": "dabo-kolo",
@@ -269,14 +277,16 @@
     "price": 40,
     "category": "bakery",
     "emoji": "🥨",
-    "description": "Crunchy fried wheat-flour snack bites, lightly spiced."
+    "description": "Crunchy fried wheat-flour snack bites, lightly spiced.",
+    "image": "/images/dabo-kolo.jpg"
   },
   {
-    "id": "special-beyainatu",
-    "title": "Special Beyainatu Deluxe",
-    "price": 340,
-    "category": "vegan",
-    "emoji": "🍽️",
-    "description": "An extra-large vegetarian combo platter with seven stews and salads."
+    "id":"shay",
+    "title":"Ethiopian Tea (Shay)",
+    "price": 45,
+    "category":"drinks",
+    "emoji":"🍵",
+    "description": "A traditional Ethiopian tea, served hot with a hint of cardamom.",
+    "image": "/images/shay.jpg"
   }
 ]

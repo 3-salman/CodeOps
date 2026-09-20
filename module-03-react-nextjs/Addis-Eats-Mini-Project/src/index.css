@@ -655,6 +655,25 @@ button { font: inherit; cursor: pointer; }
 }
 .login-page-signup a:hover { text-decoration: underline; }
 
+.login-page-status {
+  text-align: center;
+  font-size: 13.5px;
+  font-weight: bold;
+  padding: 10px 14px;
+  border-radius: 6px;
+  margin: 0 0 16px;
+}
+.login-page-status--success {
+  background: var(--leaf-soft);
+  color: var(--leaf);
+  border: 1px solid var(--leaf);
+}
+.login-page-status--error {
+  background: var(--primary-soft);
+  color: var(--primary-dark);
+  border: 1px solid var(--primary);
+}
+
 /* ==========================================================
    Cart page
    ========================================================== */
@@ -1029,6 +1048,166 @@ button { font: inherit; cursor: pointer; }
 }
 
 /* ==========================================================
+   Dish detail page
+   ========================================================== */
+
+.dish-detail-wrapper {
+  min-height: 100vh;
+  background: var(--bg);
+  padding: 40px 0 64px;
+}
+
+.dish-detail-container {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.dish-detail-back {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.dish-detail-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.dish-detail-media {
+  flex: 1 1 260px;
+  max-width: 340px;
+  aspect-ratio: 1 / 1;
+  background: var(--primary);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dish-detail-emoji {
+  font-size: 96px;
+}
+
+.dish-detail-body {
+  flex: 1 1 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dish-detail-category {
+  display: inline-block;
+  align-self: flex-start;
+  background: var(--bg-soft);
+  color: var(--ink-soft);
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 12px;
+}
+
+.dish-detail-title {
+  font-weight: bold;
+  font-size: 28px;
+  margin: 4px 0 0;
+  color: var(--ink);
+}
+
+.dish-detail-price {
+  font-weight: bold;
+  font-size: 20px;
+  color: var(--primary);
+}
+
+.dish-detail-desc {
+  margin: 8px 0 0;
+  color: var(--ink-soft);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.dish-detail-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+.dish-detail-meta {
+  list-style: none;
+  margin: 4px 0 0;
+  padding: 12px 0;
+  display: flex;
+  gap: 28px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.dish-detail-meta__item {
+  display: flex;
+  flex-direction: column;
+}
+.dish-detail-meta__item strong {
+  font-size: 15px;
+  font-weight: bold;
+  color: var(--ink);
+}
+.dish-detail-meta__item span {
+  font-size: 12px;
+  color: var(--ink-soft);
+  margin-top: 2px;
+}
+
+.dish-detail-divider {
+  display: none;
+}
+
+.dish-detail-section h4 {
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--ink);
+  margin: 4px 0 10px;
+}
+
+.dish-detail-ingredients {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.dish-detail-ingredient {
+  background: var(--bg-soft);
+  color: var(--ink-soft);
+  font-size: 13px;
+  padding: 6px 12px;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+}
+
+.dish-detail-note {
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 14px 16px;
+}
+.dish-detail-note strong {
+  font-size: 13px;
+  color: var(--primary);
+  display: block;
+  margin-bottom: 4px;
+}
+.dish-detail-note p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--ink-soft);
+  line-height: 1.5;
+}
+
+/* ==========================================================
    Menu & Favorites pages
    ========================================================== */
 
@@ -1087,4 +1266,5 @@ button { font: inherit; cursor: pointer; }
   .cart-item__media { width: 100%; height: 120px; }
   .profile-order { flex-direction: column; }
   .profile-order__media { width: 100%; height: 90px; }
+  .dish-detail-media { max-width: 100%; }
 }

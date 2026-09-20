@@ -7,7 +7,8 @@
         }
     ,
         {
-            "name":"martin",
+            "name":"martin smith",
+            "email":"martin@example.com",
             "password":"test"
         }
 

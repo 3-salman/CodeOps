@@ -3,9 +3,9 @@ import  {CartContext}  from '../context/CartContext.jsx'
 import { useState ,useContext } from 'react'
 
 export default function Navbar() {
-  // const { count } = useContext(CartContext)
   const  cart = useContext(CartContext)
-  const count=cart.length
+  const count= Array.isArray(cart)? cart.length : cart ? 1  : 0
+  
   
   const [isfavourite , favourite]= useState(true) // to render based on this
 
@@ -31,7 +31,7 @@ export default function Navbar() {
           <Link to="/cart">
           <button className="iconbtn">      {/* aria-label={`Cart (20 items)`}> */}
             <img src="https://cdn-icons-png.flaticon.com/128/9219/9219671.png" alt="" />
-            <span className="iconbtn__badge">{count}</span>
+            <span className="cart_state">{count}</span>
           </button>
           </Link>
 

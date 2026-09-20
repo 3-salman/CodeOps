@@ -1,122 +1,31 @@
 import { useEffect, useState } from 'react'
 import DishCard from '../components/DishCard.jsx'
 import { FavoritesContext } from '../context/FavoritesContext.jsx'
+import { CartContext } from '../context/CartContext.jsx'
 import { useContext } from 'react'
 import Navbar from '../components/Navbar.jsx'
 import Footer from '../components/Footer.jsx'
-// import { CartContext } from '../context/useCartContext.jsx'
 
 const categories = ['All', 'Stews', 'Meat', 'Vegan', 'Bakery', 'Drinks', 'Desserts', 'Favorites']
 
 
-// const dishes = [
-//   {
-//     id: 1,
-//     title: 'Doro Wat',
-//     description: 'Slow-braised chicken in berbere sauce, served with a boiled egg.',
-//     price: 380,
-//     emoji: '🍛',
-//     tag: 'Chef\u2019s pick',
-//     category: 'Stews',
-//   },
-//   {
-//     id: 2,
-//     title: 'Shiro',
-//     description: 'Spiced chickpea stew, smooth and rich, served with injera.',
-//     price: 260,
-//     emoji: '🥘',
-//     tag: 'Vegetarian',
-//     category: 'Vegetarian',
-//   },
-//   {
-//     id: 3,
-//     title: 'Tibs Platter',
-//     description: 'Pan-seared beef with onions, rosemary, and green peppers.',
-//     price: 410,
-//     emoji: '🍲',
-//     tag: 'Popular',
-//     category: 'Grilled',
-//   },
-//   {
-//     id: 4,
-//     title: 'Kitfo',
-//     description: 'Minced beef seasoned with mitmita and niter kibbeh, served lean or rare.',
-//     price: 450,
-//     emoji: '🥩',
-//     tag: 'Spicy',
-//     category: 'Grilled',
-//   },
-//   {
-//     id: 5,
-//     title: 'Injera Basket',
-//     description: 'Fresh sourdough flatbread, baked daily, perfect for sharing.',
-//     price: 80,
-//     emoji: '🫓',
-//     tag: 'Staple',
-//     category: 'Breads',
-//   },
-//   {
-//     id: 6,
-//     title: 'Misir Wat',
-//     description: 'Red lentils simmered in berbere, a warming vegetarian classic.',
-//     price: 240,
-//     emoji: '🍚',
-//     tag: 'Vegetarian',
-//     category: 'Vegetarian',
-//   },
-//   {
-//     id: 7,
-//     title: 'Ethiopian Coffee',
-//     description: 'Traditionally brewed jebena coffee, roasted fresh to order.',
-//     price: 90,
-//     emoji: '☕',
-//     tag: 'Must try',
-//     category: 'Drinks',
-//   },
-//   {
-//     id: 8,
-//     title: 'Tej',
-//     description: 'Honey wine served chilled, sweet and slightly fermented.',
-//     price: 150,
-//     emoji: '🍯',
-//     tag: 'Traditional',
-//     category: 'Drinks',
-//   },
-// ]
-
-// const fav=[
-//   {
-//     id: 1,
-//     title: 'Doro Wat',
-//     description: 'Slow-braised chicken in berbere sauce, served with a boiled egg.',
-//     price: 380,
-//     emoji: '🍛',
-//     tag: 'Chef\u2019s pick',
-//     category: 'Stews',
-//   },
-//   {
-//     id: 2,
-//     title: 'Shiro',
-//     description: 'Spiced chickpea stew, smooth and rich, served with injera.',
-//     price: 260,
-//     emoji: '🥘',
-//     tag: 'Vegetarian',
-//     category: 'Vegetarian',
-//   }
-
-// ]
 
 function MenuPage() {
     const [activeCategory, setActiveCategory] = useState('All')
-    const Favorites_item=useContext(FavoritesContext || [] );
-    const[favourites, setFavourites]=useState([Favorites_item] || [] )
+    const Favorites_item=useContext(FavoritesContext);
+    const Cart_item=  useContext(CartContext);
+    const CartState= Cart_item ? Array.isArray(Cart_item) ? true : false : null
+    const[favourites, setFavourites]=useState(Array.isArray(Favorites_item)? Favorites_item.length === 0? null :Favorites_item:[{...Favorites_item}] )
     const [data, setData]=useState([])
     const [isLoading, setLoading]=useState(false)
+    const [inCart , setCart]=useState(false)//CartState === null ? false : CartState === true ? true : false)
+
+  //  console.log(Cart_item.incart)
 
     useEffect(
       ()=>{
 
-  const fetchData = async () => {
+          const fetchData = async () => {
 
       try {
         setLoading(true);
@@ -129,7 +38,6 @@ function MenuPage() {
         }
         
         const resposeData = await response.json();
-        console.log(resposeData)
         setData(resposeData);
         
       } catch (err) {
@@ -139,7 +47,6 @@ function MenuPage() {
         }
       } finally {
         setLoading(false);
-        console.log("finnally")
       }
       }
       
@@ -147,26 +54,19 @@ function MenuPage() {
 
     },[] )
 
-
-    function fa(){
-
-    }
-    // setTimeout(()=>,3000)
-    // const newdish=data.map(
-    //   item => item.id === favourites.id ? {...item , favorited:true} : {...item , favorited:false} 
-    // )
     const newdish = data.map((item) => ({
-  ...item,
-  favorited: favourites.some((fav) => fav.id === item.id),
+                                 ...item,
+                                 favorited: favourites.some((fav) => fav.id === item.id),
+                                 incart : CartState === null ? false : CartState === true ? Cart_item.some((cart)=>cart.id === item.id) : Cart_item.id === item.id //Cart_item? Array.isArray(Cart_item) ? Cart_item.some((cart)=>cart.id === item.id): Cart_item.id === item.id: false
 }))
-      //  console.log(newdish.map(item=>item.favorited))
 
-
-  const filteredDishes =
+     
+   const filteredDishes =
     activeCategory === 'All'
       ? newdish
       : activeCategory === 'Favorites'? favourites : newdish.filter((dish) => dish.category.toLowerCase()  === activeCategory.toLowerCase())
       
+
 
   return (
     <div>
@@ -210,7 +110,7 @@ function MenuPage() {
           <div className="cards menu-page-cards">
             {filteredDishes.map((dish) => (
               // <FavoritesContext.Provider value={{Favourites , setFavourites}}>
-              <DishCard key={dish.id} dish={dish} />
+              <DishCard key={dish.id} dish={dish}/>
               // </FavoritesContext.Provider>
             ))}
           </div>

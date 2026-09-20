@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import { useState, useEffect } from 'react'
+import {useNavigate} from 'react-router-dom'
 
 
 
@@ -7,18 +8,14 @@ function LoginPage() {
         username:"",
         pwd:""
   });
+  const [fetching, setFetching]=useState(false);
+  const navigate=useNavigate();
 
   // const stored_user_Data=localStorage.getItem('userData')
-  const [user_data, setUser]=useState(
-    JSON.parse(localStorage.getItem('userData')) || []
-  )
+  const [user, setUser]=useState([]);
+  const [auth_state, setAuthstate]=useState(null);
+ // console.log(auth_state)
 
-  const [auth_state, setAuthstate]=useState(false);
-
-
-  function fetchfromlocalstorage() {
-    return localStorage.getItem('userData');
-  }
 
   function handlechange(e){
     const {name , value}=e.target;
@@ -33,25 +30,52 @@ function LoginPage() {
   function formhandler(e){
     e.preventDefault();
 
-  //  setAuthstate(user_data.some(name=>name.name == form.name) && user_data.some(pwd=>pwd.name == form.pwd)? true:false);
-    setAuthstate(true);
-    console.log(form);
-    console.log(user_data);
-    let t=user_data.some(name=>name.username == form.username);
-    console.log(t);
-    console.log(user_data.some(pwd=>pwd.pwd == form.pwd));
-    console.log(auth_state)
-    
-    
+    if(AuthenticateUser(form.username, form.pwd)){
+         setAuthstate(true)
+         navigate('/menu')
 
-
+    }else{
+        setAuthstate(false)
+    }
   }
-  
+
+  useEffect(()=>{
+        async function fetchData() {
+          try {
+            const response = await fetch('/user.json');
+            const data = await response.json();
+            
+            setUser(data);
+            setFetching(true);
+            console.log(data)
+          } catch (error) {
+            console.error('Error fetching user data:', error);
+          }finally {
+            console.log(user);
+          }
+        }
+        fetchData();
+
+  },[auth_state])
+
+  function AuthenticateUser(username, password) {
+    
+    const user_state = user.find(u => u.username === form.name && u.password === form.pwd);
+    return user_state  
+  }
 
   return (
      <div className="login-page-wrapper">
       <div className="login-page-card">
-        {auth_state ? "logined succesfully" : "not" }
+        {auth_state == null ? null : auth_state ? (
+        <p className="login-page-status login-page-status--success">
+           ✓ Logged in successfully
+        </p>
+        ) : (
+         <p className="login-page-status login-page-status--error">
+           ✕ Invalid email or password
+         </p>
+      )}
         <h2 className="login-page-title">Welcome Back</h2>
         <p className="login-page-subtitle">Sign in to your account</p>
         
@@ -88,7 +112,7 @@ function LoginPage() {
             <a href="#" className="login-page-forgot">Forgot password?</a>
           </div>
           
-          <button type="submit" className="login-page-button">
+          <button type="submit" className="login-page-button" onClick={formhandler}>
             Sign In
           </button>
         </form>
