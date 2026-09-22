@@ -183,6 +183,10 @@ button { font: inherit; cursor: pointer; }
   color: var(--ink);
 }
 .iconbtn:hover { background: var(--bg-soft); }
+.iconbtn img {
+  width: 18px;
+  height: 18px;
+}
 .iconbtn__badge {
   position: absolute;
   top: -4px;
@@ -198,6 +202,44 @@ button { font: inherit; cursor: pointer; }
   align-items: center;
   justify-content: center;
   padding: 0 3px;
+}
+
+.nav__account {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.nav__account-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink-soft);
+}
+.nav__account:hover .nav__account-label { color: var(--ink); }
+
+.nav__search {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 7px 12px;
+}
+.nav__search-icon {
+  width: 16px;
+  height: 16px;
+}
+.nav__search-input {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 14px;
+  color: var(--ink);
+  font-family: inherit;
+  width: 160px;
+}
+.nav__search-input::placeholder {
+  color: var(--ink-soft);
 }
 
 /* -------- hero -------- */
@@ -366,6 +408,11 @@ button { font: inherit; cursor: pointer; }
 .card__emoji {
   font-size: 64px;
   position: relative;
+}
+.card__media-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .card__tag {
   position: absolute;
@@ -728,6 +775,12 @@ button { font: inherit; cursor: pointer; }
   justify-content: center;
 }
 .cart-item__emoji { font-size: 36px; }
+.cart-item__media-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+}
 
 .cart-item__body {
   flex: 1;
@@ -1087,9 +1140,15 @@ button { font: inherit; cursor: pointer; }
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 .dish-detail-emoji {
   font-size: 96px;
+}
+.dish-detail-media-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .dish-detail-body {

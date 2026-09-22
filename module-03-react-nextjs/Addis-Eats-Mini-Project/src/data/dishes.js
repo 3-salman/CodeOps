@@ -41,12 +41,12 @@ export const dishes = [
   }
 ]
 
-// export const categories = [
-//   { id: 'all',     label: 'All',      icon: '' },
-//   { id: 'meat',    label: 'Meat',     icon: '🥩' },
-//   { id: 'vegan',   label: 'Vegan',    icon: '🌱' },
-//   { id: 'stews',   label: 'Stews',    icon: '🍲' },
-//   { id: 'drinks',  label: 'Drinks',   icon: '🫖' },
-//   { id: 'bakery',  label: 'Bakery',   icon: '🍞' },
-//   { id: 'desserts',label: 'Desserts', icon: '🍰' }
-// ]
+export const categories = [
+  { id: 'all',     label: 'All',      icon: '' },
+  { id: 'meat',    label: 'Meat',     icon: '🥩' },
+  { id: 'vegan',   label: 'Vegan',    icon: '🌱' },
+  { id: 'stews',   label: 'Stews',    icon: '🍲' },
+  { id: 'drinks',  label: 'Drinks',   icon: '🫖' },
+  { id: 'bakery',  label: 'Bakery',   icon: '🍞' },
+  { id: 'desserts',label: 'Desserts', icon: '🍰' }
+]

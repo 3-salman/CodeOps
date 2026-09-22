@@ -10,9 +10,10 @@ function LoginPage() {
   });
   const [fetching, setFetching]=useState(false);
   const navigate=useNavigate();
+  const { user, setUser } = useUser();
 
   // const stored_user_Data=localStorage.getItem('userData')
-  const [user, setUser]=useState([]);
+  // const [user, setUser]=useState([]);
   const [auth_state, setAuthstate]=useState(null);
  // console.log(auth_state)
 

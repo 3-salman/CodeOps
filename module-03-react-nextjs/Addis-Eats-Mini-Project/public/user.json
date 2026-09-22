@@ -3,12 +3,14 @@
         {
             "name": "John Doe",
             "email": "jhon@example.com",
+            "phone": "123-456-7890",
             "password": "123456"
         }
     ,
         {
             "name":"martin smith",
             "email":"martin@example.com",
+            "phone":"987-654-3210",
             "password":"test"
         }
 

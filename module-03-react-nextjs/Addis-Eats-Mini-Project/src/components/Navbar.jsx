@@ -1,13 +1,21 @@
-import { Link, NavLink } from 'react-router-dom'
-import  {CartContext}  from '../context/CartContext.jsx'
-import { useState ,useContext } from 'react'
+import { useState } from 'react'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
+import { useCart } from '../context/CartProvider.jsx'
 
 export default function Navbar() {
-  const  cart = useContext(CartContext)
-  const count= Array.isArray(cart)? cart.length : cart ? 1  : 0
-  
-  
-  const [isfavourite , favourite]= useState(true) // to render based on this
+  const { cart } = useCart()
+  const navigate = useNavigate()
+  const [searchOpen, setSearchOpen] = useState(false)
+  const [query, setQuery] = useState('')
+
+  function handleSearchSubmit(e) {
+    e.preventDefault()
+    if (query.trim()) {
+      // navigate(`/search?q=${encodeURIComponent(query.trim())}`)
+      setSearchOpen(false)
+      setQuery('')
+    }
+  }
 
   return (
     <header className="nav">
@@ -28,21 +36,45 @@ export default function Navbar() {
         </nav>
 
         <div className="nav__actions">
-          <Link to="/cart">
-          <button className="iconbtn">      {/* aria-label={`Cart (20 items)`}> */}
+          {searchOpen ? (
+            <form className="nav__search" onSubmit={handleSearchSubmit}>
+              <img
+                className="nav__search-icon"
+                src="https://cdn-icons-png.flaticon.com/128/54/54481.png"
+                alt=""
+              />
+              <input
+                type="text"
+                className="nav__search-input"
+                placeholder="Search dishes..."
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                onBlur={() => { if (!query) setSearchOpen(false) }}
+                autoFocus
+              />
+            </form>
+          ) : (
+            <button
+              type="button"
+              className="iconbtn"
+              aria-label="Search"
+              onClick={() => setSearchOpen(true)}
+            >
+              <img src="https://cdn-icons-png.flaticon.com/128/54/54481.png" alt="" />
+            </button>
+          )}
+
+          <Link to="/cart" className="iconbtn" aria-label={`Cart (${cart.length} items)`}>
             <img src="https://cdn-icons-png.flaticon.com/128/9219/9219671.png" alt="" />
-            <span className="cart_state">{count}</span>
-          </button>
+            <span className="iconbtn__badge">{cart.length}</span>
           </Link>
 
-          {/* <a className="btn btn--ghost" href="#">Sign in</a> */}
-          
-          <Link to="/profile" className="iconbtn" >
-            <img src="https://cdn-icons-png.flaticon.com/128/1077/1077114.png" alt="" />
+          <Link to="/profile" className="nav__account" aria-label="Account">
+            <span className="iconbtn">
+              <img src="https://cdn-icons-png.flaticon.com/128/1077/1077114.png" alt="" />
+            </span>
+            <span className="nav__account-label">{false ? "John  Sign out" : (<Link to="/login">Sign in</Link>)}</span>
           </Link>
-
-          {/* <a className="btn btn--primary" href="#specials">{isfavourite?"favourites":"Order now"}</a> */}
-             <a className="btn btn--primary" href="#specials">Order now</a>
         </div>
       </div>
     </header>

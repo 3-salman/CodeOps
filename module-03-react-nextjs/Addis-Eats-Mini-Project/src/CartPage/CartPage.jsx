@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react'
 import Navbar from '../components/Navbar'
-import  {CartContext}  from '../context/CartContext'
+import  {useCart}  from '../context/CartProvider'
 import { Link } from 'react-router-dom'
 import CartCard from './CartCard'
 // import { useContext } from 'react'
@@ -45,7 +45,7 @@ const total = subtotal + DELIVERY_FEE
 
 function CartPage() {
   
-  const [cart , setCart] = useState(useContext(CartContext)) //useCartContext() //useState(useContext(CartContext))
+  const [cart , setCart] = useState(useCart()) //useCartContext() //useState(useContext(CartContext))
 
 
   function addorsubtotal(op , id){

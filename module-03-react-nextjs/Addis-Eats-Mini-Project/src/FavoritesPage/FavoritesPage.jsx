@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import DishCard from '../components/DishCard.jsx'
-import { FavoritesContext} from '../context/FavoritesContext.jsx'
+import { useFavorites} from '../context/FavoritesProvider.jsx'
 import {useContext} from 'react'
 
 const favoriteDishes = [
@@ -32,10 +32,8 @@ const favoriteDishes = [
 
 function FavoritesPage() {
       
-      const fav_item=useContext(FavoritesContext || []);
-      const [fav , setFavourites]=useState(fav_item || [])
-      console.log(fav)
-      console.log(useContext(FavoritesContext || []))
+      const { favourites, setFav } = useFavorites();
+      console.log(favourites)
 
   return (
     <div className="menu-page-wrapper">
@@ -49,7 +47,7 @@ function FavoritesPage() {
           </div>
         </div>
 
-        {fav.length === 0 ? (
+        {favourites.length === 0 ? (
           <div className="menu-page-empty">
             <span className="menu-page-empty-emoji">♡</span>
             <h3>No favorites yet</h3>
@@ -60,10 +58,8 @@ function FavoritesPage() {
           </div>
         ) : (
           <div className="cards menu-page-cards">
-            {fav.map((dish) => (
-              <FavoritesContext.Provider value={{fav , setFavourites}}>
-              <DishCard key={dish.id} />   {/* dish={dish} /> */}
-              </FavoritesContext.Provider>
+            {favourites.map((dish) => (
+              <DishCard key={dish.id} dish={dish} />
             ))}
           </div>
         )}

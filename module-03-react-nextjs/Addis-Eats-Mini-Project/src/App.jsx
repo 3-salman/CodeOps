@@ -8,16 +8,11 @@ import DetailMenu from './MenuPage/DishDetailPage.jsx'
 import Test from './MenuPage/test.jsx'
 import FavoritesPage from './FavoritesPage/FavoritesPage.jsx'
 import SignupPage from './SignupPage/SignupPage.jsx'
-import { createContext, useState } from 'react'
-import { FavoritesContext,  } from './context/FavoritesContext.jsx'
+
 
 
 
 function App() {
-  const {fav, setFav}=useState([]);
-  
-const t=1
-
 
   return (
     <>

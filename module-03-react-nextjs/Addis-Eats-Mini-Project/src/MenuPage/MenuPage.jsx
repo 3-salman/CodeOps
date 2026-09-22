@@ -1,10 +1,9 @@
 import { useEffect, useState } from 'react'
 import DishCard from '../components/DishCard.jsx'
-import { FavoritesContext } from '../context/FavoritesContext.jsx'
-import { CartContext } from '../context/CartContext.jsx'
-import { useContext } from 'react'
 import Navbar from '../components/Navbar.jsx'
 import Footer from '../components/Footer.jsx'
+import { useCart } from '../context/CartProvider.jsx'
+import { useFavorites } from '../context/FavoritesProvider.jsx'
 
 const categories = ['All', 'Stews', 'Meat', 'Vegan', 'Bakery', 'Drinks', 'Desserts', 'Favorites']
 
@@ -12,10 +11,12 @@ const categories = ['All', 'Stews', 'Meat', 'Vegan', 'Bakery', 'Drinks', 'Desser
 
 function MenuPage() {
     const [activeCategory, setActiveCategory] = useState('All')
-    const Favorites_item=useContext(FavoritesContext);
-    const Cart_item=  useContext(CartContext);
-    const CartState= Cart_item ? Array.isArray(Cart_item) ? true : false : null
-    const[favourites, setFavourites]=useState(Array.isArray(Favorites_item)? Favorites_item.length === 0? null :Favorites_item:[{...Favorites_item}] )
+    // const Favorites_item=useContext(FavoritesContext);
+    const { cart, addItemtocart   }=  useCart();
+    const { favourites, addItemtoFavourites } = useFavorites();
+    // const Cart_item=  useContext(CartContext);
+    // const CartState= Cart_item ? Array.isArray(Cart_item) ? true : false : null
+    // const[favourites, setFavourites]=useState(Array.isArray(Favorites_item)? Favorites_item.length === 0? null :Favorites_item:[{...Favorites_item}] )
     const [data, setData]=useState([])
     const [isLoading, setLoading]=useState(false)
     const [inCart , setCart]=useState(false)//CartState === null ? false : CartState === true ? true : false)
@@ -57,7 +58,7 @@ function MenuPage() {
     const newdish = data.map((item) => ({
                                  ...item,
                                  favorited: favourites.some((fav) => fav.id === item.id),
-                                 incart : CartState === null ? false : CartState === true ? Cart_item.some((cart)=>cart.id === item.id) : Cart_item.id === item.id //Cart_item? Array.isArray(Cart_item) ? Cart_item.some((cart)=>cart.id === item.id): Cart_item.id === item.id: false
+                                 incart : cart.some((cartItem) => cartItem.id === item.id) //CartState === null ? false : CartState === true ? Cart_item.some((cart)=>cart.id === item.id) : Cart_item.id === item.id //Cart_item? Array.isArray(Cart_item) ? Cart_item.some((cart)=>cart.id === item.id): Cart_item.id === item.id: false
 }))
 
      
@@ -109,9 +110,7 @@ function MenuPage() {
         ) : (
           <div className="cards menu-page-cards">
             {filteredDishes.map((dish) => (
-              // <FavoritesContext.Provider value={{Favourites , setFavourites}}>
-              <DishCard key={dish.id} dish={dish}/>
-              // </FavoritesContext.Provider>
+              <DishCard key={dish.id} dish={dish} addItemtocart={addItemtocart} addItemtoFavourites={addItemtoFavourites} />
             ))}
           </div>
         )}
