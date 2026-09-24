@@ -14,8 +14,8 @@ function MenuPage() {
     const { cart, addItemtocart   }=  useCart();
     const { favourites, addItemtoFavourites } = useFavorites();
     const [data, setData]=useState([])
-    const [isLoading, setLoading]=useState(false)
-    const [inCart , setCart]=useState(false)
+    const [isLoading, setLoading] = useState(true)
+    const [error, setError] = useState('')
 
     useEffect(
       ()=>{
@@ -25,12 +25,11 @@ function MenuPage() {
       try {
         setLoading(true);
         // 2. Fetch from the public directory root
-        const response = await fetch('menu.json');
+        const response = await fetch('/menu.json');
         
         if (!response.ok) {
-          // throw new Error(`HTTP error! status: ${response.status}`);
-          console.log("error")
-        }
+            throw new Error('Bad response')
+      }
         
         const resposeData = await response.json();
         setData(resposeData);
@@ -38,7 +37,7 @@ function MenuPage() {
       } catch (err) {
         // Only update error state if the request wasn't intentionally aborted
         if (err.name !== 'AbortError') {
-          console.log('error')
+          setError('Failed to fetch menu data');
         }
       } finally {
         setLoading(false);
@@ -95,20 +94,30 @@ function MenuPage() {
           </div>
         </div>
 
-        {isLoading && "loading..."}
-        {filteredDishes.length === 0 ? (
+        {isLoading && <p>Loading menu...</p>}
+
+        {error && (
+         <div className="menu-page-empty">
+    <h3>Something went wrong</h3>
+    <p>{error}</p>
+        </div>
+        )}
+
+        {!isLoading && !error && filteredDishes.length === 0 && (
           <div className="menu-page-empty">
             <span className="menu-page-empty-emoji">🍽️</span>
             <h3>No dishes here yet</h3>
             <p>Try a different category.</p>
-          </div>
-        ) : (
-          <div className="cards menu-page-cards">
-            {filteredDishes.map((dish) => (
-              <DishCard key={dish.id} dish={dish} addItemtocart={addItemtocart} addItemtoFavourites={addItemtoFavourites} />
-            ))}
-          </div>
+        </div>
         )}
+
+        {!isLoading && !error && filteredDishes.length > 0 && (
+          <div className="cards menu-page-cards">
+          {filteredDishes.map((dish) => (
+          <DishCard key={dish.id} dish={dish} addItemtocart={addItemtocart} addItemtoFavourites={addItemtoFavourites} />
+          ))}
+        </div>
+)}
       </div>
     </div>
     </div>

@@ -4,6 +4,7 @@
             "name": "John Doe",
             "email": "jhon@example.com",
             "phone": "123-456-7890",
+            "address": "123 Main St, Anytown, USA",
             "password": "123456"
         }
     ,
@@ -11,6 +12,7 @@
             "name":"martin smith",
             "email":"martin@example.com",
             "phone":"987-654-3210",
+            "address":"456 Elm St, Othertown, USA",
             "password":"test"
         }
 
