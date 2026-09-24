@@ -1,13 +1,14 @@
 import React from 'react'
+import {useUser} from '../context/UserProvider.jsx'
 
-const user = {
-  name: 'Sara Bekele',
-  email: 'sara.bekele@example.com',
-  phone: '+251 91 234 5678',
-  address: 'Bole Road, Addis Ababa',
-  memberSince: 'March 2024',
-  initials: 'SB',
-}
+// const user = {
+//   name: 'Sara Bekele',
+//   email: 'sara.bekele@example.com',
+//   phone: '+251 91 234 5678',
+//   address: 'Bole Road, Addis Ababa',
+//   memberSince: 'March 2024',
+//   initials: 'SB',
+// }
 
 const stats = [
   { label: 'Orders', value: 27 },
@@ -49,16 +50,18 @@ const orders = [
 ]
 
 function ProfilePage() {
+  const { user } = useUser();
+
   return (
     <div className="profile-page-wrapper">
       <div className="profile-page-container">
         {/* header */}
         <div className="profile-header">
-          <div className="profile-header__avatar">{user.initials}</div>
+          <div className="profile-header__avatar">sb</div>
           <div className="profile-header__info">
             <h1 className="section-title">{user.name}</h1>
             <p className="profile-header__meta">
-              Member since {user.memberSince}
+              Member since March 2024
             </p>
           </div>
           <button type="button" className="btn btn--ghost profile-header__edit" disabled>

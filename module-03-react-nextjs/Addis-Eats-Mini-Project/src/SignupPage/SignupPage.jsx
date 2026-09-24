@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function SignupPage() {
 
@@ -97,23 +98,13 @@ function SignupPage() {
               onChange={handleChange}
             />
           </div>
-
-          <div className="login-page-form-group">
-            <label htmlFor="confirmPassword">Confirm Password</label>
-            <input
-              type="password"
-              id="confirmPassword"
-              placeholder="••••••••"
-            />
-          </div>
-
           <button type="submit" className="login-page-button" onClick={validateFormData}>
             Create Account
           </button>
         </form>
 
         <p className="login-page-signup">
-          Already have an account? <a href="#">Sign in</a>
+          Already have an account? <Link to="/login">Log in</Link>
         </p>
       </div>
     </div>

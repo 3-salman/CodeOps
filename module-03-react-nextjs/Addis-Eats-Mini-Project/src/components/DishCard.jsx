@@ -4,27 +4,9 @@ import { Link } from 'react-router-dom'
 
 export default function DishCard({ dish , addItemtocart , addItemtoFavourites}) {
 
-    // function addItemtoFavourites(){
-
-    //   const storedFavItems = JSON.parse(localStorage.getItem('fav_items') || '[]')
-    //   const favItems = Array.isArray(storedFavItems) ? storedFavItems : [storedFavItems]
-
-    //   if(dish.favorited){
-    //      const updatedFavItems = favItems.filter((item) => item.id != dish.id) ///
-
-    //      localStorage.setItem('fav_items', JSON.stringify(updatedFavItems))
-    //      setFavourites({...dish, favorited:false})
-    //   }else{
-    //     const newFavItems = [...favItems, {...dish, favorited:true}]
-    //     localStorage.setItem('fav_items', JSON.stringify(newFavItems))
-    //     setFavourites({...dish, favorited:true})
-    //   }
-    // }
-
-  
   return (
     <article className="card">
-      <Link to={"menudetail"}>
+      <Link to={`/menu/${dish.id}`}>
       <div className="card__media" >
         
         <img src={dish.image} alt={dish.title} className="card__emoji" />

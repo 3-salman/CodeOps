@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
-import Navbar from '../components/Navbar.jsx'
-import Footer from '../components/Footer.jsx'
-// import { useCart } from '../context/CartContext.jsx'
+import { useCart } from '../context/CartProvider.jsx'
 
 function DishDetailPage() {
   const { id } = useParams()
-  const { addItem } = useCart()
+  const { addItemtocart } = useCart()
 
   const [dish, setDish] = useState(null)
   const [isLoading, setLoading] = useState(false)
@@ -31,14 +29,11 @@ function DishDetailPage() {
   }, [id])
 
   const handleAdd = () => {
-    for (let i = 0; i < qty; i++) {
-      addItem(dish)
-    }
+    addItemtocart(dish)
   }
 
   return (
     <div>
-      <Navbar />
       <div className="dish-detail-wrapper">
         <div className="dish-detail-container">
           <Link to="/menu" className="link-arrow dish-detail-back">
@@ -99,7 +94,6 @@ function DishDetailPage() {
           )}
         </div>
       </div>
-      <Footer />
     </div>
   )
 }

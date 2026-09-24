@@ -1,9 +1,11 @@
 import { useState } from 'react'
 import { Link, NavLink, useNavigate } from 'react-router-dom'
 import { useCart } from '../context/CartProvider.jsx'
+import { useUser } from '../context/UserProvider.jsx'
 
 export default function Navbar() {
   const { cart } = useCart()
+  const { user } = useUser()
   const navigate = useNavigate()
   const [searchOpen, setSearchOpen] = useState(false)
   const [query, setQuery] = useState('')
@@ -11,7 +13,7 @@ export default function Navbar() {
   function handleSearchSubmit(e) {
     e.preventDefault()
     if (query.trim()) {
-      // navigate(`/search?q=${encodeURIComponent(query.trim())}`)
+
       setSearchOpen(false)
       setQuery('')
     }
@@ -31,8 +33,12 @@ export default function Navbar() {
           <NavLink to="/" end className="nav__link">
             Home
           </NavLink>
-          <a href="#specials" className="nav__link">Menu</a>
-          <a href="#how" className="nav__link">How it works</a>
+          <Link to="/menu" className="nav__link">
+            Menu
+          </Link>
+          <Link to="/#how" className="nav__link">
+            How it works
+          </Link>
         </nav>
 
         <div className="nav__actions">
@@ -73,7 +79,14 @@ export default function Navbar() {
             <span className="iconbtn">
               <img src="https://cdn-icons-png.flaticon.com/128/1077/1077114.png" alt="" />
             </span>
-            <span className="nav__account-label">{false ? "John  Sign out" : (<Link to="/login">Sign in</Link>)}</span>
+            <span className="nav__account-label">
+              {user != null ? (<div>
+                <Link to="/profile">{user.name}</Link>
+                <Link to="/login"><strong>Sign out</strong></Link></div>
+              ) : (
+                <Link to="/login">Sign in</Link>
+              )}
+            </span>
           </Link>
         </div>
       </div>

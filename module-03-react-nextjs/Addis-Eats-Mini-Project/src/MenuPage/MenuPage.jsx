@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
+import { useSearchParams } from 'react-router-dom'
 import DishCard from '../components/DishCard.jsx'
-import Navbar from '../components/Navbar.jsx'
-import Footer from '../components/Footer.jsx'
 import { useCart } from '../context/CartProvider.jsx'
 import { useFavorites } from '../context/FavoritesProvider.jsx'
 
@@ -10,18 +9,13 @@ const categories = ['All', 'Stews', 'Meat', 'Vegan', 'Bakery', 'Drinks', 'Desser
 
 
 function MenuPage() {
-    const [activeCategory, setActiveCategory] = useState('All')
-    // const Favorites_item=useContext(FavoritesContext);
+    const [searchParams, setSearchParams] = useSearchParams()
+    const activeCategory = searchParams.get('category') || 'All'
     const { cart, addItemtocart   }=  useCart();
     const { favourites, addItemtoFavourites } = useFavorites();
-    // const Cart_item=  useContext(CartContext);
-    // const CartState= Cart_item ? Array.isArray(Cart_item) ? true : false : null
-    // const[favourites, setFavourites]=useState(Array.isArray(Favorites_item)? Favorites_item.length === 0? null :Favorites_item:[{...Favorites_item}] )
     const [data, setData]=useState([])
     const [isLoading, setLoading]=useState(false)
-    const [inCart , setCart]=useState(false)//CartState === null ? false : CartState === true ? true : false)
-
-  //  console.log(Cart_item.incart)
+    const [inCart , setCart]=useState(false)
 
     useEffect(
       ()=>{
@@ -58,7 +52,7 @@ function MenuPage() {
     const newdish = data.map((item) => ({
                                  ...item,
                                  favorited: favourites.some((fav) => fav.id === item.id),
-                                 incart : cart.some((cartItem) => cartItem.id === item.id) //CartState === null ? false : CartState === true ? Cart_item.some((cart)=>cart.id === item.id) : Cart_item.id === item.id //Cart_item? Array.isArray(Cart_item) ? Cart_item.some((cart)=>cart.id === item.id): Cart_item.id === item.id: false
+                                 incart : cart.some((cartItem) => cartItem.id === item.id) 
 }))
 
      
@@ -71,7 +65,6 @@ function MenuPage() {
 
   return (
     <div>
-      <Navbar/>
     <div className="menu-page-wrapper">
       <div className="menu-page-container">
         <div className="section-head">
@@ -92,7 +85,9 @@ function MenuPage() {
                 key={cat}
                 type="button"
                 className={`chip${activeCategory === cat ? ' is-active' : ''}`}
-                onClick={() => setActiveCategory(cat)}
+                onClick={() =>
+                  setSearchParams(cat === 'All' ? {} : { category: cat })
+                }
               >
                 {cat}
               </button>
@@ -116,7 +111,6 @@ function MenuPage() {
         )}
       </div>
     </div>
-    <Footer/>
     </div>
   )
 }

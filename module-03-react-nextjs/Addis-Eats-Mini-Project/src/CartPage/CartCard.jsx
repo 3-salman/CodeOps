@@ -1,6 +1,6 @@
 import React from 'react'
 
-function CartCard({item ,addorsubtotal , remove}) {
+function CartCard({item , cartqty, remove}) {
   return (
     <div className="cart-item" key={item.id}>
     <div className="cart-item__media">
@@ -14,15 +14,15 @@ function CartCard({item ,addorsubtotal , remove}) {
                       ${(item.price * item.qty).toFixed(2)}
                     </span>
                   </div>
-                  <p className="cart-item__desc">{item.desc}</p>
+                  <p className="cart-item__desc">{item.description}</p>
 
                   <div className="cart-item__foot">
                     <div className="qty-stepper">
-                      <button type="button" className="qty-stepper__btn" onClick={()=>addorsubtotal("sub",item.id)}>
+                      <button type="button" className="qty-stepper__btn" onClick={()=>cartqty(item.id, "sub")}>
                         −
                       </button>
                       <span className="qty-stepper__val">{item.qty}</span>
-                      <button type="button" className="qty-stepper__btn"  onClick={()=>addorsubtotal("add",item.id)}>
+                      <button type="button" className="qty-stepper__btn"  onClick={()=>cartqty(item.id, "add")}>
                         +
                       </button>
                     </div>

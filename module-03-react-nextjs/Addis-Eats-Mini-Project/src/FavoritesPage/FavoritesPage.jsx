@@ -1,7 +1,5 @@
-import React, { useState } from 'react'
 import DishCard from '../components/DishCard.jsx'
 import { useFavorites} from '../context/FavoritesProvider.jsx'
-import {useContext} from 'react'
 
 const favoriteDishes = [
   {

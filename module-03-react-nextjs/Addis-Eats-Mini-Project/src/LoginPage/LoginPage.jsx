@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
-import {useNavigate} from 'react-router-dom'
+import {useNavigate, useLocation} from 'react-router-dom'
+import { useUser } from '../context/UserProvider.jsx'
 
 
 
@@ -10,12 +11,11 @@ function LoginPage() {
   });
   const [fetching, setFetching]=useState(false);
   const navigate=useNavigate();
+  const location=useLocation();
   const { user, setUser } = useUser();
-
-  // const stored_user_Data=localStorage.getItem('userData')
-  // const [user, setUser]=useState([]);
+  const [usersData, setUsersData] = useState([]);
   const [auth_state, setAuthstate]=useState(null);
- // console.log(auth_state)
+ 
 
 
   function handlechange(e){
@@ -31,12 +31,14 @@ function LoginPage() {
   function formhandler(e){
     e.preventDefault();
 
-    if(AuthenticateUser(form.username, form.pwd)){
-         setAuthstate(true)
-         navigate('/menu')
-
-    }else{
+    const isAuthenticated = AuthenticateUser(form.username, form.pwd);
+    
+    if(isAuthenticated == false){
         setAuthstate(false)
+    }else{
+         setAuthstate(true)
+         setUser(isAuthenticated )
+         navigate(location.state?.from?.pathname || '/menu')
     }
   }
 
@@ -46,13 +48,13 @@ function LoginPage() {
             const response = await fetch('/user.json');
             const data = await response.json();
             
-            setUser(data);
+            setUsersData(data);
             setFetching(true);
             console.log(data)
           } catch (error) {
             console.error('Error fetching user data:', error);
           }finally {
-            console.log(user);
+            console.log(usersData);
           }
         }
         fetchData();
@@ -60,9 +62,10 @@ function LoginPage() {
   },[auth_state])
 
   function AuthenticateUser(username, password) {
-    
-    const user_state = user.find(u => u.username === form.name && u.password === form.pwd);
-    return user_state  
+    console.log("usersData")
+    // const user_state = usersData.map((u) => u.name === username && u.password === password ? u : false);
+    const user = usersData.find((u) => u.name === username && u.password === password) || false;
+    return user  
   }
 
   return (

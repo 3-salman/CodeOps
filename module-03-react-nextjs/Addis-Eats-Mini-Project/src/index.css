@@ -738,7 +738,20 @@ button { font: inherit; cursor: pointer; }
 }
 
 .cart-page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
   margin-bottom: 28px;
+}
+
+.cart-clear-btn {
+  white-space: nowrap;
+}
+.cart-clear-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
 }
 
 .cart-page-layout {
