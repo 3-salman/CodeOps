@@ -37,7 +37,7 @@ function LoginPage() {
         setAuthstate(false)
     }else{
          setAuthstate(true)
-         setUser(isAuthenticated )
+         setUser({name: isAuthenticated.name} )
          navigate(location.state?.from?.pathname || '/menu')
     }
   }

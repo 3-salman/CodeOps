@@ -1,9 +1,16 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { useCart } from '../context/CartProvider.jsx'
+import { useFavorites } from '../context/FavoritesProvider.jsx'
 
 
-export default function DishCard({ dish , addItemtocart , addItemtoFavourites}) {
+export default function DishCard({ dish}) {
+    const { cart, addItemtocart } = useCart()
+    const { favourites, addItemtoFavourites } = useFavorites()
 
+    const favorited = favourites.some((fav) => fav.id === dish.id)
+    const incart = cart.some((item) => item.id === dish.id)
+    
   return (
     <article className="card">
       <Link to={`/menu/${dish.id}`}>
@@ -22,15 +29,15 @@ export default function DishCard({ dish , addItemtocart , addItemtoFavourites}) 
         <p className="card__desc">{dish.description}</p>
 
         <footer className="card__foot">
-          <button className={dish.favorited ? "fav-btn is-active" : "fav-btn"} onClick={()=>addItemtoFavourites(dish)}>
-      {dish.favorited ? (
+          <button className={favorited ? "fav-btn is-active" : "fav-btn"} onClick={()=>addItemtoFavourites(dish)}>
+      {favorited ? (
          <img src="https://cdn-icons-png.flaticon.com/128/8215/8215309.png" alt="favorited" />
        ) : (
          <img src="https://cdn-icons-png.flaticon.com/128/3625/3625284.png" alt="not favorited" />
       )}
       </button>
           <button className="btn btn--primary btn--sm" onClick={() => addItemtocart(dish)}>
-            {dish.incart ? " carted" : "Add +"}
+            {incart ? " carted" : "Add +"}
           </button>
         </footer>
       </div>
