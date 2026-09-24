@@ -1,10 +1,8 @@
 import React, { useContext, useState } from 'react'
-import Navbar from '../components/Navbar'
 import  {useCart}  from '../context/CartProvider'
 import { Link } from 'react-router-dom'
 import CartCard from './CartCard'
 import CartSummary from './CartSummary'
-import PaymentModal from './PaymentModal'
 
 const DELIVERY_FEE = 50
 
@@ -63,15 +61,6 @@ function CartPage() {
 
       </div>
     </div>
-
-    <PaymentModal
-      isOpen={showPayment}
-      onClose={() => setShowPayment(false)}
-      subtotal={subtotal}
-      deliveryFee={DELIVERY_FEE}
-      total={total}
-    />
-
     </div>
   )
 }

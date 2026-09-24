@@ -6,7 +6,10 @@
     "category": "stews",
     "emoji": "🥘",
     "description": "Slow-stewed chicken drumstick in a berbere-spiced sauce with hard-boiled egg and injera.",
-    "image": "/images/doro-wot.jpg"
+    "image": "/images/doro-wot.jpg",
+    "prepTime": "35 min",
+    "spiceLevel": "Medium",
+    "ingredients": ["Chicken", "Berbere spice", "Onion", "Garlic", "Boiled egg", "Niter kibbeh"]
   },
   {
     "id": "kitfo",
@@ -15,7 +18,10 @@
     "category": "meat",
     "emoji": "🥩",
     "description": "Hand-minced lean beef seasoned with mitmita spice and herbed butter. Served rare, medium, or well-done.",
-    "image": "/images/kitfo.jpg"
+    "image": "/images/kitfo.jpg",
+    "prepTime": "15 min",
+    "spiceLevel": "Medium",
+    "ingredients": ["Lean minced beef", "Mitmita spice", "Niter kibbeh", "Cardamom"]
   },
   {
     "id": "shiro",
@@ -24,7 +30,10 @@
     "category": "vegan",
     "emoji": "🌱",
     "description": "Creamy chickpea flour stew slow-simmered with garlic, ginger, and a touch of berbere.",
-    "image": "/images/shiro.jpg"
+    "image": "/images/shiro.jpg",
+    "prepTime": "25 min",
+    "spiceLevel": "Mild",
+    "ingredients": ["Chickpea flour", "Garlic", "Ginger", "Berbere", "Onion"]
   },
   {
     "id": "baklava",
@@ -33,7 +42,10 @@
     "category": "desserts",
     "emoji": "🍮",
     "description": "Layers of paper-thin filo, walnut, and honey syrup. A sweet finish to any meal.",
-    "image": "/images/baklava.jpg"
+    "image": "/images/baklava.jpg",
+    "prepTime": "50 min",
+    "spiceLevel": "None",
+    "ingredients": ["Filo pastry", "Walnuts", "Honey", "Butter"]
   },
   {
     "id": "tibs",
@@ -42,7 +54,10 @@
     "category": "meat",
     "emoji": "🍖",
     "description": "Pan-seared beef cubes sautéed with onion, rosemary, and green chili.",
-    "image": "/images/tibs.jpg"
+    "image": "/images/tibs.jpg",
+    "prepTime": "20 min",
+    "spiceLevel": "Medium",
+    "ingredients": ["Beef cubes", "Onion", "Rosemary", "Green chili"]
   },
   {
     "id": "misir-wot",
@@ -51,7 +66,10 @@
     "category": "vegan",
     "emoji": "🍛",
     "description": "Red lentils simmered in a rich berbere sauce until velvety soft.",
-    "image": "/images/misir-wot.jpg"
+    "image": "/images/misir-wot.jpg",
+    "prepTime": "30 min",
+    "spiceLevel": "Medium",
+    "ingredients": ["Red lentils", "Berbere", "Onion", "Garlic"]
   },
   {
     "id": "gomen",
@@ -60,7 +78,10 @@
     "category": "vegan",
     "emoji": "🥬",
     "description": "Collard greens slow-cooked with garlic, onion, and a hint of ginger.",
-    "image": "/images/gomen.jpg"
+    "image": "/images/gomen.jpg",
+    "prepTime": "20 min",
+    "spiceLevel": "Mild",
+    "ingredients": ["Collard greens", "Garlic", "Onion", "Ginger"]
   },
   {
     "id": "atkilt-wot",
@@ -69,7 +90,10 @@
     "category": "vegan",
     "emoji": "🥕",
     "description": "Cabbage, carrots, and potatoes gently spiced with turmeric.",
-    "image": "/images/atkilt-wot.jpg"
+    "image": "/images/atkilt-wot.jpg",
+    "prepTime": "20 min",
+    "spiceLevel": "None",
+    "ingredients": ["Cabbage", "Carrots", "Potatoes", "Turmeric"]
   },
   {
     "id": "beyainatu",
@@ -78,7 +102,10 @@
     "category": "vegan",
     "emoji": "🍽️",
     "description": "A sampler platter of vegetarian stews and salads on injera.",
-    "image": "/images/beyainatu.jpg"
+    "image": "/images/beyainatu.jpg",
+    "prepTime": "40 min",
+    "spiceLevel": "Mild",
+    "ingredients": ["Injera", "Shiro", "Misir wot", "Gomen", "Atkilt"]
   },
   {
     "id": "zil-tibzs",
@@ -96,7 +123,10 @@
     "category": "meat",
     "emoji": "🥩",
     "description": "Cubed raw beef served with mitmita and niter kibbeh.",
-    "image": "/images/gored-gored.jpg"
+    "image": "/images/gored-gored.jpg",
+    "prepTime": "10 min",
+    "spiceLevel": "Medium",
+    "ingredients": ["Raw beef cubes", "Mitmita", "Niter kibbeh"]
   },
   {
     "id": "doro-tibs",
@@ -105,7 +135,10 @@
     "category": "meat",
     "emoji": "🍗",
     "description": "Diced chicken sautéed with peppers, onion, and rosemary.",
-    "image": "/images/doro-tibs.jpg"
+    "image": "/images/doro-tibs.jpg",
+    "prepTime": "20 min",
+    "spiceLevel": "Medium",
+    "ingredients": ["Diced chicken", "Peppers", "Onion", "Rosemary"]
   },
   {
     "id": "fish-goulash",
@@ -114,7 +147,10 @@
     "category": "stews",
     "emoji": "🐟",
     "description": "Nile perch simmered in a mild berbere and tomato sauce.",
-    "image": "/images/fish-goulash.jpg"
+    "image": "/images/fish-goulash.jpg",
+    "prepTime": "30 min",
+    "spiceLevel": "Mild",
+    "ingredients": ["Nile perch", "Berbere", "Tomato", "Onion"]
   },
   {
     "id": "key-wot",
@@ -123,7 +159,10 @@
     "category": "stews",
     "emoji": "🌶️",
     "description": "A fiery beef stew slow-cooked in a deep red berbere base.",
-    "image": "/images/key-wot.jpg"
+    "image": "/images/key-wot.jpg",
+    "prepTime": "40 min",
+    "spiceLevel": "Hot",
+    "ingredients": ["Beef", "Berbere", "Onion", "Garlic"]
   },
   {
     "id": "alicha-wot",
@@ -132,7 +171,10 @@
     "category": "stews",
     "emoji": "🍲",
     "description": "A gentle turmeric-spiced beef and potato stew, no berbere heat.",
-    "image": "/images/alicha-wot.jpg"
+    "image": "/images/alicha-wot.jpg",
+    "prepTime": "35 min",
+    "spiceLevel": "None",
+    "ingredients": ["Beef", "Potato", "Turmeric", "Onion"]
   },
   {
     "id": "injera-basket",
@@ -141,7 +183,10 @@
     "category": "bakery",
     "emoji": "🫓",
     "description": "Fresh sourdough teff flatbread, baked daily. Extra pieces on request.",
-    "image": "/images/injera-basket.jpg"
+    "image": "/images/injera-basket.jpg",
+    "prepTime": "N/A (baked daily)",
+    "spiceLevel": "None",
+    "ingredients": ["Teff flour", "Water"]
   },
   {
     "id": "dabo",
@@ -150,7 +195,10 @@
     "category": "bakery",
     "emoji": "🍞",
     "description": "Soft spiced Ethiopian bread, lightly sweet with a hint of cardamom.",
-    "image": "/images/dabo.jpg"
+    "image": "/images/dabo.jpg",
+    "prepTime": "15 min",
+    "spiceLevel": "None",
+    "ingredients": ["Wheat flour", "Cardamom", "Yeast"]
   },
   {
     "id": "ambasha",
@@ -159,7 +207,10 @@
     "category": "bakery",
     "emoji": "🥖",
     "description": "Decoratively scored sweet bread flavored with cardamom and honey.",
-    "image": "/images/ambasha.jpg"
+    "image": "/images/ambasha.jpg",
+    "prepTime": "20 min",
+    "spiceLevel": "None",
+    "ingredients": ["Wheat flour", "Honey", "Cardamom"]
   },
   {
     "id": "sambusa",
@@ -168,7 +219,10 @@
     "category": "meat",
     "emoji": "🥟",
     "description": "Crispy fried pastry filled with spiced lentils or minced beef.",
-    "image": "/images/sambusa.jpg"
+    "image": "/images/sambusa.jpg",
+    "prepTime": "15 min",
+    "spiceLevel": "Medium",
+    "ingredients": ["Pastry", "Lentils or beef", "Onion", "Chili"]
   },
   {
     "id": "kikil",
@@ -177,7 +231,10 @@
     "category": "meat",
     "emoji": "🍖",
     "description": "Beef shank and trotters simmered in a light garlic-ginger broth.",
-    "image": "/images/kikil.jpg"
+    "image": "/images/kikil.jpg",
+    "prepTime": "45 min",
+    "spiceLevel": "Mild",
+    "ingredients": ["Beef shank", "Garlic", "Ginger"]
   },
   {
     "id": "dulet",
@@ -186,7 +243,10 @@
     "category": "meat",
     "emoji": "🌶️",
     "description": "Minced tripe, liver, and beef sautéed with chili and herbed butter.",
-    "image": "/images/dulet.jpg"
+    "image": "/images/dulet.jpg",
+    "prepTime": "20 min",
+    "spiceLevel": "Hot",
+    "ingredients": ["Tripe", "Liver", "Beef", "Chili", "Niter kibbeh"]
   },
   {
     "id": "chechebsa",
@@ -195,7 +255,10 @@
     "category": "bakery",
     "emoji": "🥞",
     "description": "Shredded flatbread pan-fried in spiced butter and berbere.",
-    "image": "/images/chechebsa.jpg"
+    "image": "/images/chechebsa.jpg",
+    "prepTime": "15 min",
+    "spiceLevel": "Mild",
+    "ingredients": ["Flatbread", "Berbere", "Spiced butter"]
   },
   {
     "id": "genfo",
@@ -204,7 +267,10 @@
     "category": "bakery",
     "emoji": "🍚",
     "description": "A warm barley porridge served with a well of spiced butter.",
-    "image": "/images/genfo.jpg"
+    "image": "/images/genfo.jpg",
+    "prepTime": "20 min",
+    "spiceLevel": "Mild",
+    "ingredients": ["Barley", "Spiced butter"]
   },
   {
     "id": "buna",
@@ -213,9 +279,11 @@
     "category": "drinks",
     "emoji": "☕",
     "description": "Traditionally brewed jebena coffee, roasted fresh to order.",
-    "image": "/images/buna.jpg"
+    "image": "/images/buna.jpg",
+    "prepTime": "10 min",
+    "spiceLevel": "None",
+    "ingredients": ["Coffee beans", "Water"]
   },
-  
   {
     "id": "spris",
     "title": "Spris Juice",
@@ -223,7 +291,10 @@
     "category": "drinks",
     "emoji": "🥤",
     "description": "Layered fresh fruit juice — mango, avocado, and papaya.",
-    "image": "/images/spris.jpg"
+    "image": "/images/spris.jpg",
+    "prepTime": "5 min",
+    "spiceLevel": "None",
+    "ingredients": ["Mango", "Avocado", "Papaya"]
   },
   {
     "id": "macchiato",
@@ -232,27 +303,35 @@
     "category": "drinks",
     "emoji": "☕",
     "description": "Espresso topped with a small amount of frothed milk, Italian-influenced.",
-    "image": "/images/macchiato.jpg"
+    "image": "/images/macchiato.jpg",
+    "prepTime": "5 min",
+    "spiceLevel": "None",
+    "ingredients": ["Espresso", "Milk foam"]
   },
   {
-    "id": "honey-tea",
-    "title": "Honey Tea",
-    "price": 55,
-    "category": "drinks",
-    "emoji": "🍯",
-    "description": "Black tea brewed with honey and a touch of ginger.",
-    "image": "/images/honey-tea.jpg"
-  },
-  {
-    "id": "spiced-milk",
-    "title": "Spiced Milk",
-    "price": 60,
-    "category": "drinks",
-    "emoji": "🥛",
-    "description": "Warm milk infused with cardamom, cinnamon, and a hint of nutmeg.",
-    "image": "/images/spiced-milk.jpg"
-  },
-  
+  "id": "honey-tea",
+  "title": "Honey Tea",
+  "price": 55,
+  "category": "drinks",
+  "emoji": "🍯",
+  "description": "Black tea brewed with honey and a touch of ginger.",
+  "image": "/images/honey-tea.jpg",
+  "prepTime": "5 min",
+  "spiceLevel": "None",
+  "ingredients": ["Black tea", "Honey", "Ginger"]
+},
+{
+  "id": "spiced-milk",
+  "title": "Spiced Milk",
+  "price": 60,
+  "category": "drinks",
+  "emoji": "🥛",
+  "description": "Warm milk infused with cardamom, cinnamon, and a hint of nutmeg.",
+  "image": "/images/spiced-milk.jpg",
+  "prepTime": "10 min",
+  "spiceLevel": "None",
+  "ingredients": ["Milk", "Cardamom", "Cinnamon", "Nutmeg"]
+},
   {
     "id": "himbasha-cake",
     "title": "Himbasha Cake Slice",
@@ -260,7 +339,10 @@
     "category": "desserts",
     "emoji": "🍰",
     "description": "A slice of sweet celebration bread, lightly spiced and soft.",
-    "image": "/images/himbasha-cake.jpg"
+    "image": "/images/himbasha-cake.jpg",
+    "prepTime": "40 min",
+    "spiceLevel": "None",
+    "ingredients": ["Wheat flour", "Sugar", "Cardamom"]
   },
   {
     "id": "fruit-salad",
@@ -269,7 +351,10 @@
     "category": "desserts",
     "emoji": "🍓",
     "description": "Seasonal mixed fruit lightly dressed with honey and lime.",
-    "image": "/images/fruit-salad.jpg"
+    "image": "/images/fruit-salad.jpg",
+    "prepTime": "10 min",
+    "spiceLevel": "None",
+    "ingredients": ["Seasonal fruit", "Honey", "Lime"]
   },
   {
     "id": "dabo-kolo",
@@ -278,14 +363,17 @@
     "category": "bakery",
     "emoji": "🥨",
     "description": "Crunchy fried wheat-flour snack bites, lightly spiced.",
-    "image": "/images/dabo-kolo.jpg"
+    "image": "/images/dabo-kolo.jpg",
+    "prepTime": "20 min",
+    "spiceLevel": "Mild",
+    "ingredients": ["Wheat flour", "Berbere", "Oil"]
   },
   {
-    "id":"shay",
-    "title":"Ethiopian Tea (Shay)",
+    "id": "shay",
+    "title": "Ethiopian Tea (Shay)",
     "price": 45,
-    "category":"drinks",
-    "emoji":"🍵",
+    "category": "drinks",
+    "emoji": "🍵",
     "description": "A traditional Ethiopian tea, served hot with a hint of cardamom.",
     "image": "/images/shay.jpg"
   }

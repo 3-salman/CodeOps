@@ -4,7 +4,7 @@ import { useCart } from '../context/CartProvider.jsx'
 import { useUser } from '../context/UserProvider.jsx'
 
 export default function Navbar() {
-  const { cart } = useCart()
+  const { cart ,remove} = useCart()
   const { user , setUser } = useUser()
   const navigate = useNavigate()
   const [searchOpen, setSearchOpen] = useState(false)
@@ -79,17 +79,25 @@ export default function Navbar() {
             <span className="iconbtn">
               <img src="https://cdn-icons-png.flaticon.com/128/1077/1077114.png" alt="" />
             </span>
-            <span className="nav__account-label">
-              {user != null ? (<div>
-                <Link to="/profile">{user.name}</Link>
-                <button type="button" onClick={() => setUser(null)}>
-                  <strong>Sign out</strong>
+
+            {user != null ? (
+              <div className="nav__account-info">
+                <Link to="/profile" className="nav__account-label">
+                  {user.name}
+                </Link>
+                <button
+                  type="button"
+                  className="nav__signout-btn"
+                  onClick={() =>{ setUser(null)}}
+                >
+                  Sign out
                 </button>
               </div>
-              ) : (
-                <Link to="/login">Sign in</Link>
-              )}
-            </span>
+            ) : (
+              <Link to="/login" className="nav__account-label">
+                Sign in
+              </Link>
+            )}
           </div>
         </div>
       </div>

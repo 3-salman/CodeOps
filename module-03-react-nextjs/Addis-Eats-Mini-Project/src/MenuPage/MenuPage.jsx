@@ -66,8 +66,8 @@ function MenuPage() {
 
         {error && (
          <div className="menu-page-empty">
-    <h3>Something went wrong</h3>
-    <p>{error}</p>
+          <h3>Something went wrong</h3>
+          <p>{error}</p>
         </div>
         )}
 

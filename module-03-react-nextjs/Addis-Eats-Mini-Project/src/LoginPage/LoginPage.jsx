@@ -50,11 +50,8 @@ function LoginPage() {
             
             setUsersData(data);
             setFetching(true);
-            console.log(data)
           } catch (error) {
             console.error('Error fetching user data:', error);
-          }finally {
-            console.log(usersData);
           }
         }
         fetchData();
@@ -62,7 +59,6 @@ function LoginPage() {
   },[auth_state])
 
   function AuthenticateUser(username, password) {
-    console.log("usersData")
     // const user_state = usersData.map((u) => u.name === username && u.password === password ? u : false);
     const user = usersData.find((u) => u.name === username && u.password === password) || false;
     return user  

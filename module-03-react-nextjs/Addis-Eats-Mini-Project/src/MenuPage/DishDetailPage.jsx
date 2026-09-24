@@ -50,6 +50,32 @@ function DishDetailPage() {
                 <span className="dish-detail-price">{dish.price?.toFixed(2)} ETB</span>
                 <p className="dish-detail-desc">{dish.description}</p>
 
+
+                <ul className="dish-detail-meta">
+                  <li className="dish-detail-meta__item">
+                    <strong>{dish.prepTime || 'N/A'}</strong>
+                    <span>Cooking time</span>
+                  </li>
+                  <li className="dish-detail-meta__item">
+                    <strong>{dish.spiceLevel || 'N/A'}</strong>
+                    <span>Spice level</span>
+                  </li>
+                </ul>
+
+                
+                {dish.ingredients && dish.ingredients.length > 0 && (
+                  <div className="dish-detail-section">
+                    <h4>Ingredients</h4>
+                    <div className="dish-detail-ingredients">
+                      {dish.ingredients.map((ing) => (
+                        <span className="dish-detail-ingredient" key={ing}>
+                          {ing}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
                 <div className="dish-detail-actions">
                   <div className="qty-stepper">
                     <button
