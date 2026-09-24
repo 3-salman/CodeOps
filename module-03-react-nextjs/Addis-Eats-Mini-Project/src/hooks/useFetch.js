@@ -1,24 +1,38 @@
 import { useEffect, useState } from 'react'
 
-export default function useFetch(url) {
-  const [state, setState] = useState({ data: null, loading: true, error: null })
+function useFetch(url) {
+  const [data, setData] = useState(null)
+  const [isLoading, setLoading] = useState(true)
+  const [error, setError] = useState('')
 
   useEffect(() => {
-    const controller = new AbortController()
-    setState({ data: null, loading: true, error: null })
+    let ignore = false
 
-    fetch(url, { signal: controller.signal })
-      .then((res) => {
-        if (!res.ok) throw new Error(`Request failed (${res.status})`)
-        return res.json()
-      })
-      .then((data) => setState({ data, loading: false, error: null }))
-      .catch((err) => {
-        if (err.name !== 'AbortError') setState({ data: null, loading: false, error: err.message })
-      })
+    async function load() {
+      try {
+        setLoading(true)
+        setError('')
+        const response = await fetch(url)
+        if (!response.ok) {
+          throw new Error('Bad response')
+        }
+        const result = await response.json()
+        if (!ignore) setData(result)
+      } catch (err) {
+        if (!ignore) setError('Sorry, could not load the data.')
+      } finally {
+        if (!ignore) setLoading(false)
+      }
+    }
 
-    return () => controller.abort()
+    load()
+
+    return () => {
+      ignore = true
+    }
   }, [url])
 
-  return state
+  return { data, isLoading, error }
 }
+
+export default useFetch

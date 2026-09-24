@@ -1,9 +1,8 @@
-import { useEffect, useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import DishCard from '../components/DishCard.jsx'
 import { useCart } from '../context/CartProvider.jsx'
 import { useFavorites } from '../context/FavoritesProvider.jsx'
-
+import useFetch from '../hooks/useFetch.js'
 const categories = ['All', 'Stews', 'Meat', 'Vegan', 'Bakery', 'Drinks', 'Desserts', 'Favorites']
 
 
@@ -13,42 +12,11 @@ function MenuPage() {
     const activeCategory = searchParams.get('category') || 'All'
     const { cart, addItemtocart   }=  useCart();
     const { favourites, addItemtoFavourites } = useFavorites();
-    const [data, setData]=useState([])
-    const [isLoading, setLoading] = useState(true)
-    const [error, setError] = useState('')
+  
+    const { data, isLoading, error } = useFetch('/menu.json')
+    
 
-    useEffect(
-      ()=>{
-
-          const fetchData = async () => {
-
-      try {
-        setLoading(true);
-        // 2. Fetch from the public directory root
-        const response = await fetch('/menu.json');
-        
-        if (!response.ok) {
-            throw new Error('Bad response')
-      }
-        
-        const resposeData = await response.json();
-        setData(resposeData);
-        
-      } catch (err) {
-        // Only update error state if the request wasn't intentionally aborted
-        if (err.name !== 'AbortError') {
-          setError('Failed to fetch menu data');
-        }
-      } finally {
-        setLoading(false);
-      }
-      }
-      
-      fetchData()
-
-    },[] )
-
-    const newdish = data.map((item) => ({
+    const newdish = (data || []).map((item) => ({
                                  ...item,
                                  favorited: favourites.some((fav) => fav.id === item.id),
                                  incart : cart.some((cartItem) => cartItem.id === item.id) 

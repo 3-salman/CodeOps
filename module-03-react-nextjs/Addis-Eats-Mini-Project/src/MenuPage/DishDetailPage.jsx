@@ -1,36 +1,16 @@
-import React, { useEffect, useState } from 'react'
+import {useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { useCart } from '../context/CartProvider.jsx'
+import useFetch from '../hooks/useFetch.js'
 
 function DishDetailPage() {
   const { id } = useParams()
   const { addToCartWithQty } = useCart()
 
-  const [dish, setDish] = useState(null)
-  const [isLoading, setLoading] = useState(true)
-  const [error, setError] = useState('')
   const [qty, setQty] = useState(1)
 
-  useEffect(() => {
-    const fetchDish = async () => {
-      try {
-        setLoading(true)
-        const response = await fetch('/menu.json')
-        if (!response.ok) {
-          throw new Error('Bad response')
-        }
-        const data = await response.json()
-        const foundDish = data.find((item) => String(item.id) === String(id))
-        setDish(foundDish || null)
-      } catch (err) {
-        setError('Failed to fetch dish data')
-      } finally {
-        setLoading(false)
-      }
-    }
-
-    fetchDish()
-  }, [id])
+  const { data, isLoading, error } = useFetch('/menu.json')
+  const dish = data ? data.find((item) => String(item.id) === String(id)) : null
 
   const handleAdd = () => {
     addToCartWithQty(dish, qty)
