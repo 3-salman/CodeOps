@@ -40,18 +40,39 @@ function CartProvider({children}) {
       }
     }
 
-    function cartqty(id ,op){
-      if(op === "add"){
-        const updatedCartItems = cartItems.map((item) => item.id === id?{ ...item, qty: item.qty + 1 } : {...item, qty: 1})
-        localStorage.setItem('Cart', JSON.stringify(updatedCartItems))
-        setCart(updatedCartItems)
-      }else{
-        const updatedCartItems = cartItems.map((item) => item.id === id? item.qty === 1 ? { ...item, qty: 0} : {...item, qty: item.qty - 1 } : {...item, qty: 1})
-        const filteredCartItems = updatedCartItems.filter((item) => item.qty > 0)
-        localStorage.setItem('Cart', JSON.stringify(filteredCartItems))
-        setCart(filteredCartItems)
-      }
+    function addToCartWithQty(dish, qty) {
+      const found = cartItems.find((item) => item.id === dish.id)
+      let updatedCartItems
+
+      if (found) {
+          updatedCartItems = cartItems.map((item) =>
+          item.id === dish.id ? { ...item, qty: item.qty + qty } : item)
+        } else {
+       updatedCartItems = [...cartItems, { ...dish, incart: true, qty: qty }]
+       }
+
+       localStorage.setItem('Cart', JSON.stringify(updatedCartItems))
+      setCart(updatedCartItems)
     }
+
+    function cartqty(id, op) {
+        let updatedCartItems
+
+        if (op === "add") {
+             updatedCartItems = cartItems.map((item) =>
+             item.id === id ? { ...item, qty: item.qty + 1 } : item)
+            } else {
+             updatedCartItems = cartItems.map((item) =>
+             item.id === id ? { ...item, qty: item.qty - 1 } : item)
+          }
+
+           // remove any item whose quantity reached 0
+          const filteredCartItems = updatedCartItems.filter((item) => item.qty > 0)
+
+          localStorage.setItem('Cart', JSON.stringify(filteredCartItems))
+          setCart(filteredCartItems)
+          }
+          
     function remove(id){
       const updatedCartItems = cartItems.filter((item) => item.id != id)
       localStorage.setItem('Cart', JSON.stringify(updatedCartItems))
@@ -64,7 +85,7 @@ function CartProvider({children}) {
 
 
   return (
-    <CartContext.Provider value={{ cart, addItemtocart, clearCart, cartqty , remove }}>
+    <CartContext.Provider value={{ cart, addItemtocart, clearCart, cartqty , remove , addToCartWithQty }}>
 
       {children}
     </CartContext.Provider>
@@ -77,16 +98,6 @@ export function useCart() {
   return useContext(CartContext);
 }
 
-
-
-
-
-
-
-// const cart_state= localStorage.getItem("Cart") ? JSON.parse( localStorage.getItem("Cart")) : null
-// console.log(cart_state)
-
-//   export const CartContext=createContext(cart_state);
 
 
 

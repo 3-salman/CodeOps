@@ -6,7 +6,7 @@ import CartCard from './CartCard'
 import CartSummary from './CartSummary'
 import PaymentModal from './PaymentModal'
 
-const DELIVERY_FEE = 3.5
+const DELIVERY_FEE = 50
 
 function CartPage() {
 

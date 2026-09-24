@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import {useNavigate, useLocation} from 'react-router-dom'
+import {useNavigate, useLocation, Link} from 'react-router-dom'
 import { useUser } from '../context/UserProvider.jsx'
 
 
@@ -77,7 +77,7 @@ function LoginPage() {
         </p>
         ) : (
          <p className="login-page-status login-page-status--error">
-           ✕ Invalid email or password
+           ✕ Invalid username or password
          </p>
       )}
         <h2 className="login-page-title">Welcome Back</h2>
@@ -122,7 +122,7 @@ function LoginPage() {
         </form>
         
         <p className="login-page-signup">
-          Don't have an account? <a href="#">Sign up</a>
+          Don't have an account? <Link to="/signup">Sign up</Link>
         </p>
       </div>
     </div>

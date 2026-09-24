@@ -1,10 +1,9 @@
 import React, { useState } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
-import Navbar from '../components/Navbar.jsx'
 import Footer from '../components/Footer.jsx'
 import { useCart } from '../context/CartProvider.jsx'
 
-const DELIVERY_FEE = 3.5
+const DELIVERY_FEE = 50
 
 function validate(values) {
   const errors = {}
@@ -208,18 +207,18 @@ function CheckoutPage() {
 
               <div className="cart-page-summary__row">
                 <span>Subtotal</span>
-                <span>${subtotal.toFixed(2)}</span>
+                <span>${subtotal} ETB</span>
               </div>
               <div className="cart-page-summary__row">
                 <span>Delivery fee</span>
-                <span>${DELIVERY_FEE.toFixed(2)}</span>
+                <span>${DELIVERY_FEE} ETB</span>
               </div>
 
               <div className="cart-page-summary__divider" />
 
               <div className="cart-page-summary__row cart-page-summary__row--total">
                 <span>Total</span>
-                <span>${total.toFixed(2)}</span>
+                <span>${total} ETB</span>
               </div>
 
               <Link to="/cart" className="link-arrow cart-page-continue">

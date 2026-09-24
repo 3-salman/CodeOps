@@ -11,7 +11,7 @@ function CartCard({item , cartqty, remove}) {
                   <div className="cart-item__head">
                     <h3 className="cart-item__title">{item.title}</h3>
                     <span className="cart-item__price">
-                      ${(item.price * item.qty).toFixed(2)}
+                      {item.price * item.qty} ETB
                     </span>
                   </div>
                   <p className="cart-item__desc">{item.description}</p>

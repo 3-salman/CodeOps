@@ -29,7 +29,7 @@ function App() {
             </RequireAuth>
           }
         />
-        <Route path="/profile" element={<ProfilePage />} />
+        <Route path="/profile" element={<RequireAuth><ProfilePage /></RequireAuth>} />
         <Route path="/menu" element={<MenuPage />} />
         <Route path="/menu/:id" element={<DishDetailPage />} />
         <Route path="/favorites" element={<FavoritesPage />} />

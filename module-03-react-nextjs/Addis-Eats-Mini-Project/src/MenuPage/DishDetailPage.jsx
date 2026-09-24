@@ -4,10 +4,11 @@ import { useCart } from '../context/CartProvider.jsx'
 
 function DishDetailPage() {
   const { id } = useParams()
-  const { addItemtocart } = useCart()
+  const { addToCartWithQty } = useCart()
 
   const [dish, setDish] = useState(null)
-  const [isLoading, setLoading] = useState(false)
+  const [isLoading, setLoading] = useState(true)
+  const [error, setError] = useState('')
   const [qty, setQty] = useState(1)
 
   useEffect(() => {
@@ -15,11 +16,14 @@ function DishDetailPage() {
       try {
         setLoading(true)
         const response = await fetch('/menu.json')
+        if (!response.ok) {
+          throw new Error('Bad response')
+        }
         const data = await response.json()
-        const found = data.find((item) => String(item.id) === String(id))
-        setDish(found || null)
+        const foundDish = data.find((item) => String(item.id) === String(id))
+        setDish(foundDish || null)
       } catch (err) {
-        console.log('error', err)
+        setError('Failed to fetch dish data')
       } finally {
         setLoading(false)
       }
@@ -29,7 +33,7 @@ function DishDetailPage() {
   }, [id])
 
   const handleAdd = () => {
-    addItemtocart(dish)
+    addToCartWithQty(dish, qty)
   }
 
   return (
@@ -42,7 +46,7 @@ function DishDetailPage() {
 
           {isLoading && <p>Loading...</p>}
 
-          {!isLoading && !dish && (
+          {!isLoading && !error && !dish && (
             <div className="menu-page-empty">
               <span className="menu-page-empty-emoji">🍽️</span>
               <h3>Dish not found</h3>
@@ -50,16 +54,20 @@ function DishDetailPage() {
             </div>
           )}
 
-          {!isLoading && dish && (
+          {!isLoading && !error && dish && (
             <div className="dish-detail-layout">
               <div className="dish-detail-media">
-                <span className="dish-detail-emoji">{dish.emoji}</span>
+                <img
+                  src={dish.image}
+                  alt={dish.title}
+                  className="dish-detail-media-img"
+                />
               </div>
 
               <div className="dish-detail-body">
                 <span className="dish-detail-category">{dish.category}</span>
                 <h1 className="dish-detail-title">{dish.title}</h1>
-                <span className="dish-detail-price">${dish.price?.toFixed(2)}</span>
+                <span className="dish-detail-price">{dish.price?.toFixed(2)} ETB</span>
                 <p className="dish-detail-desc">{dish.description}</p>
 
                 <div className="dish-detail-actions">

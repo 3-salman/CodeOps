@@ -2,8 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 function CartSummary({ cart }) {
-  // Calculate subtotal, delivery fee, and total
-  const DELIVERY_FEE = 3.5;
+  
+  const DELIVERY_FEE = 50;
   const subtotal = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
   const total = subtotal + DELIVERY_FEE;
 
@@ -13,18 +13,18 @@ function CartSummary({ cart }) {
 
             <div className="cart-page-summary__row">
               <span>Subtotal</span>
-              <span>${subtotal.toFixed(2)}</span>
+              <span>${subtotal} ETB</span>
             </div>
             <div className="cart-page-summary__row">
               <span>Delivery fee</span>
-              <span>${DELIVERY_FEE.toFixed(2)}</span>
+              <span>${DELIVERY_FEE} ETB</span>
             </div>
 
             <div className="cart-page-summary__divider" />
 
             <div className="cart-page-summary__row cart-page-summary__row--total">
               <span>Total</span>
-              <span>${total.toFixed(2)}</span>
+              <span>${total} ETB</span>
             </div>
 
             <Link to="/checkout" className="btn btn--primary btn--lg cart-page-checkout">
