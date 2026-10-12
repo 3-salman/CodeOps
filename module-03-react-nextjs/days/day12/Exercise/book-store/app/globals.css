@@ -1,0 +1,27 @@
+aside {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  box-shadow: 0 2px 5px #0000001a;
+  min-width: 200px;
+  margin-right: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+aside ul {
+  list-style: none;
+  margin: 1rem 0;
+  padding: 0;
+}
+
+aside li {
+  padding: 0.6rem 0.8rem;
+  color: #475569;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+aside li:hover {
+  color: #15803d;
+  background-color: #dcfce7;
+}

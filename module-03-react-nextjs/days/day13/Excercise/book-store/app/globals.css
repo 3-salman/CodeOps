@@ -1,0 +1,26 @@
+aside {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  min-width: 180px;
+  border: 1px solid #e5e7eb;
+}
+
+aside ul {
+  list-style: none;
+  margin: 0.75rem 0;
+  padding: 0;
+}
+
+aside li {
+  padding: 0.5rem 0.75rem;
+  color: #4b5563;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+aside li:hover {
+  color: #2563eb;
+  background-color: #eff6ff;
+}
