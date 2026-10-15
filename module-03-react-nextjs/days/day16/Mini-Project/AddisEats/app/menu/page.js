@@ -10,8 +10,7 @@ export const revalidate = 60;
 
 export default async function Menu() {
   return (
-    <div style={{ padding: "1.5rem" }}>
-      <NavigationButton />
+    <div >
       <h1>Menu</h1>
 
       <nav style={{ margin: "0.5rem 0 1rem" }}>

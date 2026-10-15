@@ -12,10 +12,10 @@ export default function DishSearch() {
   const [term, setTerm] = useState(searchParams.get("search") || "");
   const [debouncedTerm, setDebouncedTerm] = useState(term);
 
-  // page number from query string
+  
   const page = Number(searchParams.get("page")) || 1;
 
-  // debounce term
+  
   useEffect(() => {
     const timer = setTimeout(() => {
       setDebouncedTerm(term);
@@ -23,12 +23,12 @@ export default function DishSearch() {
     return () => clearTimeout(timer);
   }, [term]);
 
-  // null key when term is empty
+  
   const key = debouncedTerm.trim()
     ? `/api/dishes?search=${encodeURIComponent(debouncedTerm.trim())}&page=${page}`
     : null;
 
-  // keepPreviousData prevents flickering between searches
+  
   const { data, isValidating } = useSWR(key, fetcher, {
     keepPreviousData: true
   });
