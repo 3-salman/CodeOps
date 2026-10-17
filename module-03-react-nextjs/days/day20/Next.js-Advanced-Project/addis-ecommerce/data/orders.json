@@ -1,0 +1,53 @@
+[
+  {
+    "id": "ord_811",
+    "userId": "u2",
+    "items": [
+      {
+        "productId": "p1",
+        "name": "ThinkPad E14 Gen 5",
+        "price": 68000,
+        "qty": 1
+      }
+    ],
+    "total": 68300,
+    "status": "delivered",
+    "createdAt": "2026-09-20T09:00:00Z",
+    "phone": "+251 91 234 5678",
+    "address": "Bole Road, Addis Ababa"
+  },
+  {
+    "id": "ord_812",
+    "userId": "u2",
+    "items": [
+      {
+        "productId": "p28",
+        "name": "Beelink SER5",
+        "price": 32000,
+        "qty": 1
+      }
+    ],
+    "total": 32300,
+    "status": "shipped",
+    "createdAt": "2026-10-08T14:30:00Z",
+    "phone": "+251 91 234 5678",
+    "address": "Bole Road, Addis Ababa"
+  },
+  {
+    "id": "ord_813",
+    "userId": "u3",
+    "items": [
+      {
+        "productId": "p5",
+        "name": "ASUS Vivobook 16",
+        "price": 55000,
+        "qty": 1
+      }
+    ],
+    "total": 55300,
+    "status": "processing",
+    "createdAt": "2026-10-12T11:15:00Z",
+    "phone": "+251 92 345 6789",
+    "address": "Piassa, Addis Ababa"
+  }
+]

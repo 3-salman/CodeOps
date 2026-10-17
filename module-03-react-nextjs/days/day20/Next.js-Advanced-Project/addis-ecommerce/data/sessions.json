@@ -1,0 +1,29 @@
+[
+  {
+    "id": "u1",
+    "name": "Admin",
+    "email": "admin@shop.test",
+    "role": "admin",
+    "passwordHash": "340c904d1030aafa3c3c65466b7e275b:d190fe6751473b4c24cc47f9aff8c71e1b6b0d2ac7c9d2914185459f8675be541de59144a0435e0d602c3766435d8d98bb50bb7de23153d623fa4d839210e285"
+  },
+  {
+    "id": "u2",
+    "name": "Abel Tesfaye",
+    "email": "abel@shop.test",
+    "role": "customer",
+    "passwordHash": "3dd01745d858424f8e7fc7f5dff805a0:df85b131302d35ca3da3bff98e643c820db949aaf03ba5e6772f97efe40f5e93059e08907ae3d42792ef0dd6b8e3debac3bb7a0e78b0c88e18e37187ebb33f83"
+  },
+  {
+    "id": "u3",
+    "name": "Sara Bekele",
+    "email": "sara@shop.test",
+    "role": "customer",
+    "passwordHash": "123456"
+  },
+  {
+    "id": "ab782f45-f651-4696-9e2f-aa9e4171180d",
+    "userId": "u2",
+    "name": "Abel Tesfaye",
+    "role": "customer"
+  }
+]

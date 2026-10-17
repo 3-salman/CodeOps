@@ -1,0 +1,1122 @@
+[
+  {
+    "id": "p1",
+    "slug": "thinkpad-e14-gen-5",
+    "name": "ThinkPad E14 Gen 5",
+    "category": "laptops",
+    "emoji": "💻",
+    "price": 68000,
+    "stock": 8,
+    "description": "Reliable 14-inch business laptop for work and study.",
+    "image": null,
+    "brand": "Lenovo",
+    "specs": [
+      {
+        "label": "Processor",
+        "value": "Intel Core i5 13th Gen"
+      },
+      {
+        "label": "Memory",
+        "value": "16 GB DDR4"
+      },
+      {
+        "label": "Storage",
+        "value": "512 GB SSD"
+      },
+      {
+        "label": "Display",
+        "value": "14\" FHD IPS"
+      },
+      {
+        "label": "Weight",
+        "value": "1.4 kg"
+      }
+    ],
+    "highlights": [
+      "Strong keyboard",
+      "Business-grade build",
+      "Many ports"
+    ],
+    "warranty": "1 year"
+  },
+  {
+    "id": "p2",
+    "slug": "hp-pavilion-15",
+    "name": "HP Pavilion 15",
+    "category": "laptops",
+    "emoji": "💻",
+    "price": 59000,
+    "stock": 10,
+    "description": "A 15-inch laptop for everyday tasks and entertainment.",
+    "image": null,
+    "brand": "HP",
+    "specs": [
+      {
+        "label": "Processor",
+        "value": "Intel Core i5 12th Gen"
+      },
+      {
+        "label": "Memory",
+        "value": "8 GB DDR4"
+      },
+      {
+        "label": "Storage",
+        "value": "512 GB SSD"
+      },
+      {
+        "label": "Display",
+        "value": "15.6\" FHD IPS"
+      },
+      {
+        "label": "Weight",
+        "value": "1.7 kg"
+      }
+    ],
+    "highlights": [
+      "Large screen",
+      "Fast SSD",
+      "Everyday performance"
+    ],
+    "warranty": "1 year"
+  },
+  {
+    "id": "p3",
+    "slug": "macbook-air-m2",
+    "name": "MacBook Air M2",
+    "category": "laptops",
+    "emoji": "💻",
+    "price": 125000,
+    "stock": 5,
+    "description": "Thin, light and fast laptop with Apple silicon.",
+    "image": null,
+    "brand": "Apple",
+    "specs": [
+      {
+        "label": "Processor",
+        "value": "Apple M2"
+      },
+      {
+        "label": "Memory",
+        "value": "8 GB unified"
+      },
+      {
+        "label": "Storage",
+        "value": "256 GB SSD"
+      },
+      {
+        "label": "Display",
+        "value": "13.6\" Liquid Retina"
+      },
+      {
+        "label": "Battery",
+        "value": "Up to 18 hours"
+      }
+    ],
+    "highlights": [
+      "Fanless and silent",
+      "All-day battery",
+      "MagSafe charging"
+    ],
+    "warranty": "1 year"
+  },
+  {
+    "id": "p4",
+    "slug": "dell-inspiron-14",
+    "name": "Dell Inspiron 14",
+    "category": "laptops",
+    "emoji": "💻",
+    "price": 62500,
+    "stock": 9,
+    "description": "Portable laptop with plenty of memory for multitasking.",
+    "image": null,
+    "brand": "Dell",
+    "specs": [
+      {
+        "label": "Processor",
+        "value": "Intel Core i5 13th Gen"
+      },
+      {
+        "label": "Memory",
+        "value": "16 GB DDR4"
+      },
+      {
+        "label": "Storage",
+        "value": "512 GB SSD"
+      },
+      {
+        "label": "Display",
+        "value": "14\" FHD+ IPS"
+      },
+      {
+        "label": "Weight",
+        "value": "1.5 kg"
+      }
+    ],
+    "highlights": [
+      "Light and portable",
+      "16 GB RAM",
+      "Fast SSD"
+    ],
+    "warranty": "1 year"
+  },
+  {
+    "id": "p5",
+    "slug": "asus-vivobook-16",
+    "name": "ASUS Vivobook 16",
+    "category": "laptops",
+    "emoji": "💻",
+    "price": 55000,
+    "stock": 12,
+    "description": "Large-screen laptop that is good value for students and offices.",
+    "image": null,
+    "brand": "ASUS",
+    "specs": [
+      {
+        "label": "Processor",
+        "value": "AMD Ryzen 5 7530U"
+      },
+      {
+        "label": "Memory",
+        "value": "16 GB DDR4"
+      },
+      {
+        "label": "Storage",
+        "value": "512 GB SSD"
+      },
+      {
+        "label": "Display",
+        "value": "16\" WUXGA IPS"
+      },
+      {
+        "label": "Weight",
+        "value": "1.9 kg"
+      }
+    ],
+    "highlights": [
+      "Roomy 16\" display",
+      "Ryzen performance",
+      "Full-size keyboard"
+    ],
+    "warranty": "1 year"
+  },
+  {
+    "id": "p6",
+    "slug": "acer-aspire-5",
+    "name": "Acer Aspire 5",
+    "category": "laptops",
+    "emoji": "💻",
+    "price": 48000,
+    "stock": 14,
+    "description": "Affordable 15-inch laptop for school and home.",
+    "image": null,
+    "brand": "Acer",
+    "specs": [
+      {
+        "label": "Processor",
+        "value": "Intel Core i5 12th Gen"
+      },
+      {
+        "label": "Memory",
+        "value": "8 GB DDR4"
+      },
+      {
+        "label": "Storage",
+        "value": "512 GB SSD"
+      },
+      {
+        "label": "Display",
+        "value": "15.6\" FHD IPS"
+      },
+      {
+        "label": "Weight",
+        "value": "1.8 kg"
+      }
+    ],
+    "highlights": [
+      "Great value",
+      "Fast SSD",
+      "Slim bezels"
+    ],
+    "warranty": "1 year"
+  },
+  {
+    "id": "p7",
+    "slug": "macbook-pro-14-m3",
+    "name": "MacBook Pro 14 M3",
+    "category": "laptops",
+    "emoji": "💻",
+    "price": 210000,
+    "stock": 3,
+    "description": "Powerful laptop for editing, coding and creative work.",
+    "image": null,
+    "brand": "Apple",
+    "specs": [
+      {
+        "label": "Processor",
+        "value": "Apple M3"
+      },
+      {
+        "label": "Memory",
+        "value": "16 GB unified"
+      },
+      {
+        "label": "Storage",
+        "value": "512 GB SSD"
+      },
+      {
+        "label": "Display",
+        "value": "14.2\" Liquid Retina XDR"
+      },
+      {
+        "label": "Battery",
+        "value": "Up to 22 hours"
+      }
+    ],
+    "highlights": [
+      "Bright XDR screen",
+      "Pro-level speed",
+      "Long battery"
+    ],
+    "warranty": "1 year"
+  },
+  {
+    "id": "p8",
+    "slug": "dell-xps-13",
+    "name": "Dell XPS 13",
+    "category": "laptops",
+    "emoji": "💻",
+    "price": 135000,
+    "stock": 4,
+    "description": "Compact premium ultrabook for people on the move.",
+    "image": null,
+    "brand": "Dell",
+    "specs": [
+      {
+        "label": "Processor",
+        "value": "Intel Core i7 13th Gen"
+      },
+      {
+        "label": "Memory",
+        "value": "16 GB LPDDR5"
+      },
+      {
+        "label": "Storage",
+        "value": "512 GB SSD"
+      },
+      {
+        "label": "Display",
+        "value": "13.4\" FHD+"
+      },
+      {
+        "label": "Weight",
+        "value": "1.2 kg"
+      }
+    ],
+    "highlights": [
+      "Premium aluminium body",
+      "Very light",
+      "Sharp display"
+    ],
+    "warranty": "1 year"
+  },
+  {
+    "id": "p9",
+    "slug": "hp-elitebook-840",
+    "name": "HP EliteBook 840",
+    "category": "laptops",
+    "emoji": "💻",
+    "price": 98000,
+    "stock": 6,
+    "description": "Business laptop with strong security features.",
+    "image": null,
+    "brand": "HP",
+    "specs": [
+      {
+        "label": "Processor",
+        "value": "Intel Core i7 12th Gen"
+      },
+      {
+        "label": "Memory",
+        "value": "16 GB DDR5"
+      },
+      {
+        "label": "Storage",
+        "value": "512 GB SSD"
+      },
+      {
+        "label": "Display",
+        "value": "14\" WUXGA IPS"
+      },
+      {
+        "label": "Security",
+        "value": "Fingerprint reader, webcam shutter"
+      }
+    ],
+    "highlights": [
+      "Business security",
+      "Durable build",
+      "Good battery"
+    ],
+    "warranty": "1 year"
+  },
+  {
+    "id": "p10",
+    "slug": "lenovo-ideapad-slim-3",
+    "name": "Lenovo IdeaPad Slim 3",
+    "category": "laptops",
+    "emoji": "💻",
+    "price": 42000,
+    "stock": 15,
+    "description": "Entry-level laptop for browsing, documents and video calls.",
+    "image": null,
+    "brand": "Lenovo",
+    "specs": [
+      {
+        "label": "Processor",
+        "value": "Intel Core i3 12th Gen"
+      },
+      {
+        "label": "Memory",
+        "value": "8 GB DDR4"
+      },
+      {
+        "label": "Storage",
+        "value": "256 GB SSD"
+      },
+      {
+        "label": "Display",
+        "value": "15.6\" FHD"
+      },
+      {
+        "label": "Weight",
+        "value": "1.6 kg"
+      }
+    ],
+    "highlights": [
+      "Low price",
+      "Slim design",
+      "Good for basics"
+    ],
+    "warranty": "1 year"
+  },
+  {
+    "id": "p11",
+    "slug": "samsung-galaxy-book3",
+    "name": "Samsung Galaxy Book3",
+    "category": "laptops",
+    "emoji": "💻",
+    "price": 78000,
+    "stock": 5,
+    "description": "Laptop with a vivid AMOLED display.",
+    "image": null,
+    "brand": "Samsung",
+    "specs": [
+      {
+        "label": "Processor",
+        "value": "Intel Core i5 13th Gen"
+      },
+      {
+        "label": "Memory",
+        "value": "16 GB LPDDR4X"
+      },
+      {
+        "label": "Storage",
+        "value": "512 GB SSD"
+      },
+      {
+        "label": "Display",
+        "value": "15.6\" AMOLED FHD"
+      },
+      {
+        "label": "Weight",
+        "value": "1.58 kg"
+      }
+    ],
+    "highlights": [
+      "AMOLED screen",
+      "Light body",
+      "Works with Galaxy phones"
+    ],
+    "warranty": "1 year"
+  },
+  {
+    "id": "p12",
+    "slug": "lenovo-yoga-7i",
+    "name": "Lenovo Yoga 7i",
+    "category": "laptops",
+    "emoji": "💻",
+    "price": 82000,
+    "stock": 4,
+    "description": "Flexible 2-in-1 laptop with a touch screen.",
+    "image": null,
+    "brand": "Lenovo",
+    "specs": [
+      {
+        "label": "Processor",
+        "value": "Intel Core i5 13th Gen"
+      },
+      {
+        "label": "Memory",
+        "value": "16 GB LPDDR5"
+      },
+      {
+        "label": "Storage",
+        "value": "512 GB SSD"
+      },
+      {
+        "label": "Display",
+        "value": "14\" 2.8K touchscreen"
+      },
+      {
+        "label": "Design",
+        "value": "360° hinge, 2-in-1"
+      }
+    ],
+    "highlights": [
+      "Touchscreen",
+      "Folds into a tablet",
+      "Sharp 2.8K display"
+    ],
+    "warranty": "1 year"
+  },
+  {
+    "id": "p13",
+    "slug": "asus-tuf-gaming-f15",
+    "name": "ASUS TUF Gaming F15",
+    "category": "gaming",
+    "emoji": "🎮",
+    "price": 95000,
+    "stock": 6,
+    "description": "Durable gaming laptop with a fast screen.",
+    "image": null,
+    "brand": "ASUS",
+    "specs": [
+      {
+        "label": "Processor",
+        "value": "Intel Core i5 12th Gen"
+      },
+      {
+        "label": "Memory",
+        "value": "16 GB DDR4"
+      },
+      {
+        "label": "Storage",
+        "value": "512 GB SSD"
+      },
+      {
+        "label": "Display",
+        "value": "15.6\" FHD 144Hz"
+      },
+      {
+        "label": "Graphics",
+        "value": "NVIDIA RTX 3050"
+      }
+    ],
+    "highlights": [
+      "144Hz screen",
+      "Tough build",
+      "RTX graphics"
+    ],
+    "warranty": "1 year"
+  },
+  {
+    "id": "p14",
+    "slug": "lenovo-legion-5",
+    "name": "Lenovo Legion 5",
+    "category": "gaming",
+    "emoji": "🎮",
+    "price": 115000,
+    "stock": 4,
+    "description": "Well-cooled gaming laptop that handles modern games.",
+    "image": null,
+    "brand": "Lenovo",
+    "specs": [
+      {
+        "label": "Processor",
+        "value": "AMD Ryzen 7 7735HS"
+      },
+      {
+        "label": "Memory",
+        "value": "16 GB DDR5"
+      },
+      {
+        "label": "Storage",
+        "value": "512 GB SSD"
+      },
+      {
+        "label": "Display",
+        "value": "15.6\" FHD 165Hz"
+      },
+      {
+        "label": "Graphics",
+        "value": "NVIDIA RTX 4060"
+      }
+    ],
+    "highlights": [
+      "RTX 4060 graphics",
+      "165Hz screen",
+      "Good cooling"
+    ],
+    "warranty": "1 year"
+  },
+  {
+    "id": "p15",
+    "slug": "hp-victus-16",
+    "name": "HP Victus 16",
+    "category": "gaming",
+    "emoji": "🎮",
+    "price": 88000,
+    "stock": 5,
+    "description": "Gaming laptop with a big screen and solid performance.",
+    "image": null,
+    "brand": "HP",
+    "specs": [
+      {
+        "label": "Processor",
+        "value": "AMD Ryzen 5 7640HS"
+      },
+      {
+        "label": "Memory",
+        "value": "16 GB DDR5"
+      },
+      {
+        "label": "Storage",
+        "value": "512 GB SSD"
+      },
+      {
+        "label": "Display",
+        "value": "16.1\" FHD 144Hz"
+      },
+      {
+        "label": "Graphics",
+        "value": "NVIDIA RTX 4050"
+      }
+    ],
+    "highlights": [
+      "Large 16\" screen",
+      "RTX 4050",
+      "Quiet fans"
+    ],
+    "warranty": "1 year"
+  },
+  {
+    "id": "p16",
+    "slug": "acer-nitro-5",
+    "name": "Acer Nitro 5",
+    "category": "gaming",
+    "emoji": "🎮",
+    "price": 85000,
+    "stock": 7,
+    "description": "Affordable gaming laptop for students and beginners.",
+    "image": null,
+    "brand": "Acer",
+    "specs": [
+      {
+        "label": "Processor",
+        "value": "Intel Core i5 12th Gen"
+      },
+      {
+        "label": "Memory",
+        "value": "16 GB DDR4"
+      },
+      {
+        "label": "Storage",
+        "value": "512 GB SSD"
+      },
+      {
+        "label": "Display",
+        "value": "15.6\" FHD 144Hz"
+      },
+      {
+        "label": "Graphics",
+        "value": "NVIDIA RTX 3050"
+      }
+    ],
+    "highlights": [
+      "Good gaming value",
+      "144Hz screen",
+      "Backlit keyboard"
+    ],
+    "warranty": "1 year"
+  },
+  {
+    "id": "p17",
+    "slug": "msi-katana-15",
+    "name": "MSI Katana 15",
+    "category": "gaming",
+    "emoji": "🎮",
+    "price": 105000,
+    "stock": 3,
+    "description": "Fast gaming laptop with large storage.",
+    "image": null,
+    "brand": "MSI",
+    "specs": [
+      {
+        "label": "Processor",
+        "value": "Intel Core i7 13th Gen"
+      },
+      {
+        "label": "Memory",
+        "value": "16 GB DDR5"
+      },
+      {
+        "label": "Storage",
+        "value": "1 TB SSD"
+      },
+      {
+        "label": "Display",
+        "value": "15.6\" FHD 144Hz"
+      },
+      {
+        "label": "Graphics",
+        "value": "NVIDIA RTX 4060"
+      }
+    ],
+    "highlights": [
+      "1 TB storage",
+      "RTX 4060",
+      "Fast Core i7"
+    ],
+    "warranty": "1 year"
+  },
+  {
+    "id": "p18",
+    "slug": "dell-optiplex-7010",
+    "name": "Dell OptiPlex 7010",
+    "category": "desktops",
+    "emoji": "🖥️",
+    "price": 52000,
+    "stock": 8,
+    "description": "Reliable small-tower desktop for offices.",
+    "image": null,
+    "brand": "Dell",
+    "specs": [
+      {
+        "label": "Processor",
+        "value": "Intel Core i5 13th Gen"
+      },
+      {
+        "label": "Memory",
+        "value": "8 GB DDR4"
+      },
+      {
+        "label": "Storage",
+        "value": "256 GB SSD"
+      },
+      {
+        "label": "Display",
+        "value": "Monitor sold separately"
+      },
+      {
+        "label": "Form factor",
+        "value": "Small tower"
+      }
+    ],
+    "highlights": [
+      "Office reliable",
+      "Small size",
+      "Easy to upgrade"
+    ],
+    "warranty": "1 year"
+  },
+  {
+    "id": "p19",
+    "slug": "hp-prodesk-400-g9",
+    "name": "HP ProDesk 400 G9",
+    "category": "desktops",
+    "emoji": "🖥️",
+    "price": 48000,
+    "stock": 9,
+    "description": "Compact business desktop that is quiet and dependable.",
+    "image": null,
+    "brand": "HP",
+    "specs": [
+      {
+        "label": "Processor",
+        "value": "Intel Core i5 12th Gen"
+      },
+      {
+        "label": "Memory",
+        "value": "8 GB DDR4"
+      },
+      {
+        "label": "Storage",
+        "value": "512 GB SSD"
+      },
+      {
+        "label": "Display",
+        "value": "Monitor sold separately"
+      },
+      {
+        "label": "Form factor",
+        "value": "Small form factor"
+      }
+    ],
+    "highlights": [
+      "Compact",
+      "Business-ready",
+      "Quiet"
+    ],
+    "warranty": "1 year"
+  },
+  {
+    "id": "p20",
+    "slug": "lenovo-thinkcentre-m70s",
+    "name": "Lenovo ThinkCentre M70s",
+    "category": "desktops",
+    "emoji": "🖥️",
+    "price": 46000,
+    "stock": 10,
+    "description": "Dependable desktop for work and school.",
+    "image": null,
+    "brand": "Lenovo",
+    "specs": [
+      {
+        "label": "Processor",
+        "value": "Intel Core i5 12th Gen"
+      },
+      {
+        "label": "Memory",
+        "value": "8 GB DDR4"
+      },
+      {
+        "label": "Storage",
+        "value": "512 GB SSD"
+      },
+      {
+        "label": "Display",
+        "value": "Monitor sold separately"
+      },
+      {
+        "label": "Form factor",
+        "value": "Small tower"
+      }
+    ],
+    "highlights": [
+      "Solid build",
+      "Good ports",
+      "Value price"
+    ],
+    "warranty": "1 year"
+  },
+  {
+    "id": "p21",
+    "slug": "voltmart-gaming-pc",
+    "name": "VoltMart Gaming PC",
+    "category": "desktops",
+    "emoji": "🖥️",
+    "price": 90000,
+    "stock": 4,
+    "description": "Custom-built gaming desktop assembled in our workshop.",
+    "image": null,
+    "brand": "VoltMart",
+    "specs": [
+      {
+        "label": "Processor",
+        "value": "AMD Ryzen 5 5600"
+      },
+      {
+        "label": "Memory",
+        "value": "16 GB DDR4"
+      },
+      {
+        "label": "Storage",
+        "value": "500 GB NVMe SSD"
+      },
+      {
+        "label": "Display",
+        "value": "Monitor sold separately"
+      },
+      {
+        "label": "Graphics",
+        "value": "NVIDIA RTX 4060"
+      }
+    ],
+    "highlights": [
+      "Built for games",
+      "Easy to upgrade",
+      "RGB case"
+    ],
+    "warranty": "1 year"
+  },
+  {
+    "id": "p22",
+    "slug": "voltmart-office-pc",
+    "name": "VoltMart Office PC",
+    "category": "desktops",
+    "emoji": "🖥️",
+    "price": 35000,
+    "stock": 12,
+    "description": "Custom-built desktop for office and home use.",
+    "image": null,
+    "brand": "VoltMart",
+    "specs": [
+      {
+        "label": "Processor",
+        "value": "Intel Core i5 10th Gen"
+      },
+      {
+        "label": "Memory",
+        "value": "8 GB DDR4"
+      },
+      {
+        "label": "Storage",
+        "value": "256 GB SSD"
+      },
+      {
+        "label": "Display",
+        "value": "Monitor sold separately"
+      },
+      {
+        "label": "Form factor",
+        "value": "Mid tower"
+      }
+    ],
+    "highlights": [
+      "Low price",
+      "Quiet",
+      "Fast boot"
+    ],
+    "warranty": "1 year"
+  },
+  {
+    "id": "p23",
+    "slug": "imac-24-m3",
+    "name": "iMac 24 M3",
+    "category": "all-in-one",
+    "emoji": "🖱️",
+    "price": 165000,
+    "stock": 3,
+    "description": "Slim all-in-one with a sharp 4.5K display.",
+    "image": null,
+    "brand": "Apple",
+    "specs": [
+      {
+        "label": "Processor",
+        "value": "Apple M3"
+      },
+      {
+        "label": "Memory",
+        "value": "8 GB unified"
+      },
+      {
+        "label": "Storage",
+        "value": "256 GB SSD"
+      },
+      {
+        "label": "Display",
+        "value": "24\" 4.5K Retina"
+      },
+      {
+        "label": "Camera",
+        "value": "1080p FaceTime HD"
+      }
+    ],
+    "highlights": [
+      "Beautiful 4.5K screen",
+      "Everything in one",
+      "Good speakers"
+    ],
+    "warranty": "1 year"
+  },
+  {
+    "id": "p24",
+    "slug": "hp-all-in-one-24",
+    "name": "HP All-in-One 24",
+    "category": "all-in-one",
+    "emoji": "🖱️",
+    "price": 58000,
+    "stock": 6,
+    "description": "Tidy all-in-one for home and small offices.",
+    "image": null,
+    "brand": "HP",
+    "specs": [
+      {
+        "label": "Processor",
+        "value": "Intel Core i5 12th Gen"
+      },
+      {
+        "label": "Memory",
+        "value": "8 GB DDR4"
+      },
+      {
+        "label": "Storage",
+        "value": "512 GB SSD"
+      },
+      {
+        "label": "Display",
+        "value": "23.8\" FHD"
+      },
+      {
+        "label": "Camera",
+        "value": "5 MP webcam"
+      }
+    ],
+    "highlights": [
+      "Saves desk space",
+      "Built-in webcam",
+      "Wireless keyboard"
+    ],
+    "warranty": "1 year"
+  },
+  {
+    "id": "p25",
+    "slug": "lenovo-ideacentre-aio-3",
+    "name": "Lenovo IdeaCentre AIO 3",
+    "category": "all-in-one",
+    "emoji": "🖱️",
+    "price": 54000,
+    "stock": 5,
+    "description": "Affordable all-in-one with a privacy webcam shutter.",
+    "image": null,
+    "brand": "Lenovo",
+    "specs": [
+      {
+        "label": "Processor",
+        "value": "AMD Ryzen 5 5500U"
+      },
+      {
+        "label": "Memory",
+        "value": "8 GB DDR4"
+      },
+      {
+        "label": "Storage",
+        "value": "512 GB SSD"
+      },
+      {
+        "label": "Display",
+        "value": "23.8\" FHD"
+      },
+      {
+        "label": "Camera",
+        "value": "720p with privacy shutter"
+      }
+    ],
+    "highlights": [
+      "Privacy shutter",
+      "Clean look",
+      "Good value"
+    ],
+    "warranty": "1 year"
+  },
+  {
+    "id": "p26",
+    "slug": "mac-mini-m2",
+    "name": "Mac mini M2",
+    "category": "mini-pc",
+    "emoji": "🗄️",
+    "price": 85000,
+    "stock": 4,
+    "description": "Tiny desktop with Apple silicon speed.",
+    "image": null,
+    "brand": "Apple",
+    "specs": [
+      {
+        "label": "Processor",
+        "value": "Apple M2"
+      },
+      {
+        "label": "Memory",
+        "value": "8 GB unified"
+      },
+      {
+        "label": "Storage",
+        "value": "256 GB SSD"
+      },
+      {
+        "label": "Display",
+        "value": "Monitor sold separately"
+      },
+      {
+        "label": "Ports",
+        "value": "2 Thunderbolt, 2 USB-A, HDMI"
+      }
+    ],
+    "highlights": [
+      "Very small",
+      "Fast M2 chip",
+      "Silent"
+    ],
+    "warranty": "1 year"
+  },
+  {
+    "id": "p27",
+    "slug": "intel-nuc-13-pro",
+    "name": "Intel NUC 13 Pro",
+    "category": "mini-pc",
+    "emoji": "🗄️",
+    "price": 62000,
+    "stock": 5,
+    "description": "Compact PC that fits behind a monitor.",
+    "image": null,
+    "brand": "Intel",
+    "specs": [
+      {
+        "label": "Processor",
+        "value": "Intel Core i5 13th Gen"
+      },
+      {
+        "label": "Memory",
+        "value": "16 GB DDR4"
+      },
+      {
+        "label": "Storage",
+        "value": "512 GB SSD"
+      },
+      {
+        "label": "Display",
+        "value": "Monitor sold separately"
+      },
+      {
+        "label": "Ports",
+        "value": "2 Thunderbolt 4, HDMI, USB-A"
+      }
+    ],
+    "highlights": [
+      "Palm-sized",
+      "Thunderbolt 4",
+      "Runs 4 monitors"
+    ],
+    "warranty": "1 year"
+  },
+  {
+    "id": "p28",
+    "slug": "beelink-ser5",
+    "name": "Beelink SER5",
+    "category": "mini-pc",
+    "emoji": "🗄️",
+    "price": 32000,
+    "stock": 9,
+    "description": "Budget mini PC for office and media use.",
+    "image": null,
+    "brand": "Beelink",
+    "specs": [
+      {
+        "label": "Processor",
+        "value": "AMD Ryzen 5 5500U"
+      },
+      {
+        "label": "Memory",
+        "value": "16 GB DDR4"
+      },
+      {
+        "label": "Storage",
+        "value": "500 GB SSD"
+      },
+      {
+        "label": "Display",
+        "value": "Monitor sold separately"
+      },
+      {
+        "label": "Ports",
+        "value": "HDMI, DisplayPort, USB-C"
+      }
+    ],
+    "highlights": [
+      "Low price",
+      "Small and quiet",
+      "Good for office"
+    ],
+    "warranty": "1 year"
+  }
+]

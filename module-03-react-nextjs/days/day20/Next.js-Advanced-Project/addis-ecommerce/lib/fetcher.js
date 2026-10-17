@@ -1,0 +1,6 @@
+// Used by SWR: fetch a url and give back the JSON.
+export async function fetcher(url) {
+  const res = await fetch(url)
+  if (!res.ok) throw new Error('Request failed')
+  return res.json()
+}
