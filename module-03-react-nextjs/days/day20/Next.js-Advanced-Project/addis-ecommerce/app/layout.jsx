@@ -3,6 +3,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { CartProvider } from '@/components/CartProvider'
 import { SITE_URL } from '@/lib/site'
+import { Suspense } from 'react'
 
 export const metadata = {
   metadataBase: new URL(SITE_URL), // makes every preview image url absolute
@@ -18,9 +19,11 @@ export default function RootLayout({ children }) {
       <body>
         <CartProvider>
           <Header />
+          <Suspense fallback={"loding"}>
           <main className="page">
             <div className="container">{children}</div>
           </main>
+          </Suspense>
           <Footer />
         </CartProvider>
       </body>

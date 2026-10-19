@@ -8,7 +8,7 @@
     "price": 68000,
     "stock": 8,
     "description": "Reliable 14-inch business laptop for work and study.",
-    "image": null,
+    "image": "thinkpad-e14-gen-5.jpg",
     "brand": "Lenovo",
     "specs": [
       {
@@ -48,7 +48,7 @@
     "price": 59000,
     "stock": 10,
     "description": "A 15-inch laptop for everyday tasks and entertainment.",
-    "image": null,
+    "image": "hp-pavilion-15.jpg",
     "brand": "HP",
     "specs": [
       {
@@ -88,7 +88,7 @@
     "price": 125000,
     "stock": 5,
     "description": "Thin, light and fast laptop with Apple silicon.",
-    "image": null,
+    "image": "https://images.unsplash.com/photo-1659135890064-d57187f0946c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
     "brand": "Apple",
     "specs": [
       {
@@ -128,7 +128,7 @@
     "price": 62500,
     "stock": 9,
     "description": "Portable laptop with plenty of memory for multitasking.",
-    "image": null,
+    "image": "https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
     "brand": "Dell",
     "specs": [
       {
@@ -159,86 +159,8 @@
     ],
     "warranty": "1 year"
   },
-  {
-    "id": "p5",
-    "slug": "asus-vivobook-16",
-    "name": "ASUS Vivobook 16",
-    "category": "laptops",
-    "emoji": "💻",
-    "price": 55000,
-    "stock": 12,
-    "description": "Large-screen laptop that is good value for students and offices.",
-    "image": null,
-    "brand": "ASUS",
-    "specs": [
-      {
-        "label": "Processor",
-        "value": "AMD Ryzen 5 7530U"
-      },
-      {
-        "label": "Memory",
-        "value": "16 GB DDR4"
-      },
-      {
-        "label": "Storage",
-        "value": "512 GB SSD"
-      },
-      {
-        "label": "Display",
-        "value": "16\" WUXGA IPS"
-      },
-      {
-        "label": "Weight",
-        "value": "1.9 kg"
-      }
-    ],
-    "highlights": [
-      "Roomy 16\" display",
-      "Ryzen performance",
-      "Full-size keyboard"
-    ],
-    "warranty": "1 year"
-  },
-  {
-    "id": "p6",
-    "slug": "acer-aspire-5",
-    "name": "Acer Aspire 5",
-    "category": "laptops",
-    "emoji": "💻",
-    "price": 48000,
-    "stock": 14,
-    "description": "Affordable 15-inch laptop for school and home.",
-    "image": null,
-    "brand": "Acer",
-    "specs": [
-      {
-        "label": "Processor",
-        "value": "Intel Core i5 12th Gen"
-      },
-      {
-        "label": "Memory",
-        "value": "8 GB DDR4"
-      },
-      {
-        "label": "Storage",
-        "value": "512 GB SSD"
-      },
-      {
-        "label": "Display",
-        "value": "15.6\" FHD IPS"
-      },
-      {
-        "label": "Weight",
-        "value": "1.8 kg"
-      }
-    ],
-    "highlights": [
-      "Great value",
-      "Fast SSD",
-      "Slim bezels"
-    ],
-    "warranty": "1 year"
-  },
+  
+  
   {
     "id": "p7",
     "slug": "macbook-pro-14-m3",
@@ -248,7 +170,7 @@
     "price": 210000,
     "stock": 3,
     "description": "Powerful laptop for editing, coding and creative work.",
-    "image": null,
+    "image": "https://images.unsplash.com/photo-1526570207772-784d36084510?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
     "brand": "Apple",
     "specs": [
       {
@@ -288,7 +210,7 @@
     "price": 135000,
     "stock": 4,
     "description": "Compact premium ultrabook for people on the move.",
-    "image": null,
+    "image": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
     "brand": "Dell",
     "specs": [
       {
@@ -328,7 +250,7 @@
     "price": 98000,
     "stock": 6,
     "description": "Business laptop with strong security features.",
-    "image": null,
+    "image": "https://images.unsplash.com/photo-1663354027456-ce6a7e07d212?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
     "brand": "HP",
     "specs": [
       {
@@ -359,46 +281,7 @@
     ],
     "warranty": "1 year"
   },
-  {
-    "id": "p10",
-    "slug": "lenovo-ideapad-slim-3",
-    "name": "Lenovo IdeaPad Slim 3",
-    "category": "laptops",
-    "emoji": "💻",
-    "price": 42000,
-    "stock": 15,
-    "description": "Entry-level laptop for browsing, documents and video calls.",
-    "image": null,
-    "brand": "Lenovo",
-    "specs": [
-      {
-        "label": "Processor",
-        "value": "Intel Core i3 12th Gen"
-      },
-      {
-        "label": "Memory",
-        "value": "8 GB DDR4"
-      },
-      {
-        "label": "Storage",
-        "value": "256 GB SSD"
-      },
-      {
-        "label": "Display",
-        "value": "15.6\" FHD"
-      },
-      {
-        "label": "Weight",
-        "value": "1.6 kg"
-      }
-    ],
-    "highlights": [
-      "Low price",
-      "Slim design",
-      "Good for basics"
-    ],
-    "warranty": "1 year"
-  },
+  
   {
     "id": "p11",
     "slug": "samsung-galaxy-book3",
@@ -408,7 +291,7 @@
     "price": 78000,
     "stock": 5,
     "description": "Laptop with a vivid AMOLED display.",
-    "image": null,
+    "image": "https://images.unsplash.com/photo-1721164869501-8090229eedb6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
     "brand": "Samsung",
     "specs": [
       {
@@ -448,7 +331,7 @@
     "price": 82000,
     "stock": 4,
     "description": "Flexible 2-in-1 laptop with a touch screen.",
-    "image": null,
+    "image": "https://images.unsplash.com/photo-1763162139130-240507e9fad5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
     "brand": "Lenovo",
     "specs": [
       {
@@ -488,7 +371,7 @@
     "price": 95000,
     "stock": 6,
     "description": "Durable gaming laptop with a fast screen.",
-    "image": null,
+    "image": "https://images.unsplash.com/photo-1696710257827-75e2e5954059?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
     "brand": "ASUS",
     "specs": [
       {
@@ -528,7 +411,7 @@
     "price": 115000,
     "stock": 4,
     "description": "Well-cooled gaming laptop that handles modern games.",
-    "image": null,
+    "image": "https://images.unsplash.com/photo-1763162410742-1d0097cea556?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
     "brand": "Lenovo",
     "specs": [
       {
@@ -568,7 +451,7 @@
     "price": 88000,
     "stock": 5,
     "description": "Gaming laptop with a big screen and solid performance.",
-    "image": null,
+    "image": "https://images.unsplash.com/photo-1565375706404-082d37dd1f5d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
     "brand": "HP",
     "specs": [
       {
@@ -608,7 +491,7 @@
     "price": 85000,
     "stock": 7,
     "description": "Affordable gaming laptop for students and beginners.",
-    "image": null,
+    "image": "https://images.unsplash.com/photo-1693206578613-144dd540b892?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
     "brand": "Acer",
     "specs": [
       {
@@ -648,7 +531,7 @@
     "price": 105000,
     "stock": 3,
     "description": "Fast gaming laptop with large storage.",
-    "image": null,
+    "image": "https://images.unsplash.com/photo-1734605022658-ef4a7977a095?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
     "brand": "MSI",
     "specs": [
       {
@@ -688,7 +571,7 @@
     "price": 52000,
     "stock": 8,
     "description": "Reliable small-tower desktop for offices.",
-    "image": null,
+    "image": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
     "brand": "Dell",
     "specs": [
       {
@@ -728,7 +611,7 @@
     "price": 48000,
     "stock": 9,
     "description": "Compact business desktop that is quiet and dependable.",
-    "image": null,
+    "image": "https://images.unsplash.com/photo-1663354027456-ce6a7e07d212?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
     "brand": "HP",
     "specs": [
       {
@@ -768,7 +651,7 @@
     "price": 46000,
     "stock": 10,
     "description": "Dependable desktop for work and school.",
-    "image": null,
+    "image": "https://images.unsplash.com/photo-1763162410742-1d0097cea556?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
     "brand": "Lenovo",
     "specs": [
       {
@@ -808,7 +691,7 @@
     "price": 90000,
     "stock": 4,
     "description": "Custom-built gaming desktop assembled in our workshop.",
-    "image": null,
+    "image": "https://images.unsplash.com/photo-1660855551740-4474188debdb?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
     "brand": "Addis-Ecommerce",
     "specs": [
       {
@@ -841,14 +724,14 @@
   },
   {
     "id": "p22",
-    "slug": "Addis-Ecommerce-office-pc",
-    "name": "Addis-Ecommerce Office PC",
+    "slug": "office-pc",
+    "name": "Office PC",
     "category": "desktops",
     "emoji": "🖥️",
     "price": 35000,
     "stock": 12,
     "description": "Custom-built desktop for office and home use.",
-    "image": null,
+    "image": "https://images.unsplash.com/photo-1625842268584-8f3296236761?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
     "brand": "Addis-Ecommerce",
     "specs": [
       {
@@ -888,7 +771,7 @@
     "price": 165000,
     "stock": 3,
     "description": "Slim all-in-one with a sharp 4.5K display.",
-    "image": null,
+    "image": "https://images.unsplash.com/photo-1560195307-95127677e806?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
     "brand": "Apple",
     "specs": [
       {
@@ -919,46 +802,7 @@
     ],
     "warranty": "1 year"
   },
-  {
-    "id": "p24",
-    "slug": "hp-all-in-one-24",
-    "name": "HP All-in-One 24",
-    "category": "all-in-one",
-    "emoji": "🖱️",
-    "price": 58000,
-    "stock": 6,
-    "description": "Tidy all-in-one for home and small offices.",
-    "image": null,
-    "brand": "HP",
-    "specs": [
-      {
-        "label": "Processor",
-        "value": "Intel Core i5 12th Gen"
-      },
-      {
-        "label": "Memory",
-        "value": "8 GB DDR4"
-      },
-      {
-        "label": "Storage",
-        "value": "512 GB SSD"
-      },
-      {
-        "label": "Display",
-        "value": "23.8\" FHD"
-      },
-      {
-        "label": "Camera",
-        "value": "5 MP webcam"
-      }
-    ],
-    "highlights": [
-      "Saves desk space",
-      "Built-in webcam",
-      "Wireless keyboard"
-    ],
-    "warranty": "1 year"
-  },
+ 
   {
     "id": "p25",
     "slug": "lenovo-ideacentre-aio-3",
@@ -968,7 +812,7 @@
     "price": 54000,
     "stock": 5,
     "description": "Affordable all-in-one with a privacy webcam shutter.",
-    "image": null,
+    "image": "https://images.unsplash.com/photo-1760999187614-7a3b22a077d4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
     "brand": "Lenovo",
     "specs": [
       {
@@ -1008,7 +852,7 @@
     "price": 85000,
     "stock": 4,
     "description": "Tiny desktop with Apple silicon speed.",
-    "image": null,
+    "image": "https://images.unsplash.com/photo-1787806134175-4598b49bf21e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
     "brand": "Apple",
     "specs": [
       {
@@ -1038,85 +882,6 @@
       "Silent"
     ],
     "warranty": "1 year"
-  },
-  {
-    "id": "p27",
-    "slug": "intel-nuc-13-pro",
-    "name": "Intel NUC 13 Pro",
-    "category": "mini-pc",
-    "emoji": "🗄️",
-    "price": 62000,
-    "stock": 5,
-    "description": "Compact PC that fits behind a monitor.",
-    "image": null,
-    "brand": "Intel",
-    "specs": [
-      {
-        "label": "Processor",
-        "value": "Intel Core i5 13th Gen"
-      },
-      {
-        "label": "Memory",
-        "value": "16 GB DDR4"
-      },
-      {
-        "label": "Storage",
-        "value": "512 GB SSD"
-      },
-      {
-        "label": "Display",
-        "value": "Monitor sold separately"
-      },
-      {
-        "label": "Ports",
-        "value": "2 Thunderbolt 4, HDMI, USB-A"
-      }
-    ],
-    "highlights": [
-      "Palm-sized",
-      "Thunderbolt 4",
-      "Runs 4 monitors"
-    ],
-    "warranty": "1 year"
-  },
-  {
-    "id": "p28",
-    "slug": "beelink-ser5",
-    "name": "Beelink SER5",
-    "category": "mini-pc",
-    "emoji": "🗄️",
-    "price": 32000,
-    "stock": 9,
-    "description": "Budget mini PC for office and media use.",
-    "image": null,
-    "brand": "Beelink",
-    "specs": [
-      {
-        "label": "Processor",
-        "value": "AMD Ryzen 5 5500U"
-      },
-      {
-        "label": "Memory",
-        "value": "16 GB DDR4"
-      },
-      {
-        "label": "Storage",
-        "value": "500 GB SSD"
-      },
-      {
-        "label": "Display",
-        "value": "Monitor sold separately"
-      },
-      {
-        "label": "Ports",
-        "value": "HDMI, DisplayPort, USB-C"
-      }
-    ],
-    "highlights": [
-      "Low price",
-      "Small and quiet",
-      "Good for office"
-    ],
-    "warranty": "1 year"
   }
+ 
 ]

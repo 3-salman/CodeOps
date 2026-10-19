@@ -6,7 +6,9 @@ export default function ProductCard({ product }) {
   return (
     <div className="card">
       <Link href={`/products/${product.slug}`}>
-        <div className="card-emoji">{product.emoji}</div>
+        <div className="card-emoji">
+          <img src={product.image} alt="Product image" />
+          </div>
         <p className="card-category">{product.category}</p>
         <h3>{product.name}</h3>
         <p className="card-price">{product.price.toLocaleString('en-US')} ETB</p>

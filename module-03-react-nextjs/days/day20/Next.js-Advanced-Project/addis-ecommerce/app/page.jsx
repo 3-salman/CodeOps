@@ -37,7 +37,7 @@ export default async function Home() {
           <h1>Laptops and computers, delivered across Addis</h1>
           <p>
             Laptops, gaming laptops, desktops and mini PCs. Real specifications, clear prices in
-            birr and a one-year warranty on everything.
+            birr and a one-year warranty onnn everything.
           </p>
           <div className="hero-buttons">
             <Link href="/products" className="btn btn-light">Shop all products</Link>

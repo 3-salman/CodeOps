@@ -118,6 +118,14 @@ h1 {
   border-radius: 6px;
 }
 
+/* ---- image styling for product card ---- */
+.card-emoji img {
+  width: auto;
+  height: 100%;
+  /* object-fit: contain; Keeps the image proportions intact */
+  border-radius: 6px;  /* Matches the container's rounded corners */
+}
+
 .card-category {
   margin: 10px 0 0;
   font-size: 12px;
