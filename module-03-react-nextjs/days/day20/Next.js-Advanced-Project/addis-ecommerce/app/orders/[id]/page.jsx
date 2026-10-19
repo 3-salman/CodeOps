@@ -6,7 +6,11 @@ import { money } from '@/lib/pricing'
 import CancelOrderButton from '@/components/CancelOrderButton'
 import OrderStatus from '@/components/OrderStatus'
 
-export const metadata = { title: 'Order' }
+export const metadata = {
+  title: 'Order details',
+  description: 'The items, total and live delivery status of your order.',
+  robots: { index: false },
+}
 
 export default async function OrderPage({ params }) {
   const { id } = await params

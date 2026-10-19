@@ -2,7 +2,11 @@ import { redirect } from 'next/navigation'
 import { getSession } from '@/lib/session'
 import CheckoutForm from '@/components/CheckoutForm'
 
-export const metadata = { title: 'Checkout' }
+export const metadata = {
+  title: 'Checkout',
+  description: 'Enter your delivery details and place your order. Pay on delivery.',
+  robots: { index: false },
+}
 
 export default async function CheckoutPage() {
   // LAYER 2 - the page checks the session is real, not just that a cookie exists.

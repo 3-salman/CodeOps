@@ -62,6 +62,10 @@ export function CartProvider({ children }) {
   function removeItem(productId) {
     setCart(cart.filter((item) => item.productId !== productId))
   }
+  
+  function removeall(){
+
+  }
 
   function clearCart() {
     setCart([])

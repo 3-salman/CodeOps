@@ -1,65 +1,56 @@
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { getProductBySlug } from '@/lib/db'
-
+import AddToCart from '@/components/AddToCart'
+import { SITE_URL } from '@/lib/site'
 
 // The tab title and description for this product.
 export async function generateMetadata({ params }) {
   const { slug } = await params
   const product = await getProductBySlug(slug)
   if (!product) return { title: 'Product not found' }
-  return { title: product.name, description: product.description }
+  return {
+    title: product.name,
+    description: `${product.description} ${product.price.toLocaleString('en-US')} ETB.`,
+    alternates: { canonical: `/products/${slug}` },
+    openGraph: {
+      title: product.name,
+      description: `${product.price.toLocaleString('en-US')} ETB · ${product.brand}`,
+      type: 'website',
+    },
+  }
 }
 
 export default async function ProductPage({ params }) {
   const { slug } = await params
-  const product = {
-    "id": "p26",
-    "slug": "mac-mini-m2",
-    "name": "Mac mini M2",
-    "category": "mini-pc",
-    "emoji": "🗄️",
-    "price": 85000,
-    "stock": 4,
-    "description": "Tiny desktop with Apple silicon speed.",
-    "image": null,
-    "brand": "Apple",
-    "specs": [
-      {
-        "label": "Processor",
-        "value": "Apple M2"
-      },
-      {
-        "label": "Memory",
-        "value": "8 GB unified"
-      },
-      {
-        "label": "Storage",
-        "value": "256 GB SSD"
-      },
-      {
-        "label": "Display",
-        "value": "Monitor sold separately"
-      },
-      {
-        "label": "Ports",
-        "value": "2 Thunderbolt, 2 USB-A, HDMI"
-      }
-    ],
-    "highlights": [
-      "Very small",
-      "Fast M2 chip",
-      "Silent"
-    ],
-    "warranty": "1 year"
-  }
-  // await getProductBySlug(slug)
+  const product = await getProductBySlug(slug)
 
   // No product with this slug -> show the 404 page.
   if (!product) notFound()
 
+  // Structured data (JSON-LD): tells search engines this page is a product with a price.
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: product.name,
+    description: product.description,
+    category: product.category,
+    brand: { '@type': 'Brand', name: product.brand },
+    offers: {
+      '@type': 'Offer',
+      url: `${SITE_URL}/products/${product.slug}`,
+      priceCurrency: 'ETB',
+      price: product.price,
+      availability: product.stock > 0 ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock',
+    },
+  }
+
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }}
+      />
       <Link href="/products" className="back-link">← Back to products</Link>
 
       <div className="detail">
@@ -83,7 +74,7 @@ export default async function ProductPage({ params }) {
             <p className="error">Out of stock</p>
           )}
 
-          {/* <AddToCart product={product} /> */}
+          <AddToCart product={product} />
         </div>
       </div>
 

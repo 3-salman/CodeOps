@@ -1,35 +1,30 @@
-import Link from 'next/link'
-import { getSession } from '@/lib/session'
-import SignOutButton from './SignOutButton'
-import CartLink from './CartLink'
+'use client'
 
-export default async function Header() {
-  const session = await getSession()
+import { useState } from 'react'
+import { useCart } from './CartProvider'
+
+export default function AddToCart({ product }) {
+  const { addToCart } = useCart()
+  const [qty, setQty] = useState(1)
+  const [added, setAdded] = useState(false)
+
+  function handleAdd() {
+    addToCart(product, qty)
+    setAdded(true)
+    // setTimeout(() => setAdded(false), 1500)
+  }
 
   return (
-    <header className="header">
-      <div className="container header-row">
-        <Link href="/" className="brand">VoltMart</Link>
-
-        <nav className="nav">
-          <Link href="/products">Products</Link>
-          <Link href="/about">About us</Link>
-          {session && <Link href="/orders">Orders</Link>}
-          {session && session.role === 'admin' && <Link href="/admin">Admin</Link>}
-        </nav>
-
-        <div className="account">
-          <CartLink />
-          {session ? (
-            <>
-              <span>{session.name}</span>
-              <SignOutButton />
-            </>
-          ) : (
-            <Link href="/signin" className="btn">Sign in</Link>
-          )}
-        </div>
+    <div className="add-to-cart">
+      <div className="qty">
+        <button onClick={() => setQty(Math.max(1, qty - 1))}>−</button>
+        <span>{qty}</span>
+        <button onClick={() => setQty(Math.min(product.stock, qty + 1))}>+</button>
       </div>
-    </header>
+
+      <button className="btn" onClick={handleAdd} disabled={product.stock === 0}>
+        {added ? 'Added ✓' : 'Add to cart'}
+      </button>
+    </div>
   )
 }

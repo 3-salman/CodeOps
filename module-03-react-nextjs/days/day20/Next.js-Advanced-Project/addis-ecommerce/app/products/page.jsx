@@ -2,7 +2,10 @@ import Link from 'next/link'
 import { getProducts } from '@/lib/db'
 import ProductGrid from '@/components/ProductGrid'
 
-export const metadata = { title: 'Products' }
+export const metadata = {
+  title: 'Products',
+  description: 'Browse all laptops, gaming laptops, desktops, all-in-ones and mini PCs. Search by name or brand and filter by category.',
+}
 
 // The category buttons. "id" matches the category in products.json.
 const categories = [

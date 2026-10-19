@@ -4,7 +4,11 @@ import { getSession } from '@/lib/session'
 import { getOrdersFor } from '@/lib/db'
 import { money } from '@/lib/pricing'
 
-export const metadata = { title: 'My orders' }
+export const metadata = {
+  title: 'My orders',
+  description: 'Your Addis-Ecommerce orders and their delivery status.',
+  robots: { index: false },
+}
 
 export default async function OrdersPage() {
   // LAYER 2 - page check

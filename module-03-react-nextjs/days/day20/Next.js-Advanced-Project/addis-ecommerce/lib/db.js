@@ -4,6 +4,7 @@ import path from 'path'
 // The ONLY file that touches storage. Swap this for a real database later
 // without changing any page or action. Note: Vercel's filesystem is
 // read-only, so writes here will not persist on a deployment.
+
 const dir = path.join(process.cwd(), 'data')
 const read = async (name) => JSON.parse(await fs.readFile(path.join(dir, `${name}.json`), 'utf8'))
 const write = (name, data) => fs.writeFile(path.join(dir, `${name}.json`), JSON.stringify(data, null, 2))

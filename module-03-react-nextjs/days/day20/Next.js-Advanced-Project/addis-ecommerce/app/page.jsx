@@ -20,6 +20,10 @@ const perks = [
   { icon: '💳', title: 'Pay on delivery', text: 'Or by mobile money' },
 ]
 
+export const metadata = {
+  description: 'Shop laptops, gaming laptops, desktops, all-in-ones and mini PCs in Addis Ababa. Clear prices in ETB and a 1-year warranty.',
+}
+
 export default async function Home() {
   const products = await getProducts()
   const featured = featuredSlugs

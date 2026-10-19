@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export const metadata = {
   title: 'About us',
-  description: 'VoltMart sells laptops, gaming laptops, desktops and mini PCs in Addis Ababa.',
+  description: 'Addis-Ecommerce sells laptops, gaming laptops, desktops and mini PCs in Addis Ababa.',
 }
 
 const reasons = [
@@ -20,7 +20,7 @@ export default function AboutPage() {
       <div className="section-box">
         <h2>Who we are</h2>
         <p>
-          VoltMart is an online shop for laptops and computers in Addis Ababa. We started with one
+          Addis-Ecommerce is an online shop for laptops and computers in Addis Ababa. We started with one
           idea: buying a computer should be simple. You should see the real specifications, a clear
           price in birr, and get a product that works.
         </p>
@@ -32,7 +32,7 @@ export default function AboutPage() {
       </div>
 
       <div className="section-box">
-        <h2>Why choose VoltMart</h2>
+        <h2>Why choose Addis-Ecommerce</h2>
         <div className="reasons">
           {reasons.map((r) => (
             <div className="reason" key={r.title}>
@@ -48,7 +48,7 @@ export default function AboutPage() {
         <ul className="info-list">
           <li>Address: Bole, Addis Ababa</li>
           <li>Phone: +251 900 000 000</li>
-          <li>Email: support@voltmart.example</li>
+          <li>Email: support@Addis-Ecommerce.example</li>
           <li>Open: Monday to Saturday, 9:00 – 18:00</li>
         </ul>
       </div>

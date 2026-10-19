@@ -34,7 +34,8 @@ export default function SignInForm({ next }) {
   return (
     <form className="form" onSubmit={handleSubmit}>
       <h1>Sign in</h1>
-
+      <p className="hint">email:abel@shop.test</p>
+       <p className="hint">pwd: demo1234 </p>
       <label>Email</label>
       <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
 
@@ -46,7 +47,7 @@ export default function SignInForm({ next }) {
       <button className="btn" type="submit" disabled={loading}>
         {loading ? 'Signing in...' : 'Sign in'}
       </button>
-      <p className="hint">Demo: abel@shop.test / demo1234 · admin@shop.test / admin1234</p>
+      
     </form>
   )
 }

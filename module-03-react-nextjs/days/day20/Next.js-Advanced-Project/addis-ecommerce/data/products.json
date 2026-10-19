@@ -801,15 +801,15 @@
   },
   {
     "id": "p21",
-    "slug": "voltmart-gaming-pc",
-    "name": "VoltMart Gaming PC",
+    "slug": "Addis-Ecommerce-gaming-pc",
+    "name": "Addis-Ecommerce Gaming PC",
     "category": "desktops",
     "emoji": "🖥️",
     "price": 90000,
     "stock": 4,
     "description": "Custom-built gaming desktop assembled in our workshop.",
     "image": null,
-    "brand": "VoltMart",
+    "brand": "Addis-Ecommerce",
     "specs": [
       {
         "label": "Processor",
@@ -841,15 +841,15 @@
   },
   {
     "id": "p22",
-    "slug": "voltmart-office-pc",
-    "name": "VoltMart Office PC",
+    "slug": "Addis-Ecommerce-office-pc",
+    "name": "Addis-Ecommerce Office PC",
     "category": "desktops",
     "emoji": "🖥️",
     "price": 35000,
     "stock": 12,
     "description": "Custom-built desktop for office and home use.",
     "image": null,
-    "brand": "VoltMart",
+    "brand": "Addis-Ecommerce",
     "specs": [
       {
         "label": "Processor",

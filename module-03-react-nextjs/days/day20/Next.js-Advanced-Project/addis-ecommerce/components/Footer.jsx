@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="container footer-row">
         <div className="footer-col">
-          <h3>VoltMart</h3>
+          <h3>Addis-Ecommerce</h3>
           <p>Laptops and computers with local delivery in Addis Ababa.</p>
         </div>
 
@@ -25,14 +25,14 @@ export default function Footer() {
 
         <div className="footer-col">
           <h4>Contact</h4>
-          <p>support@voltmart.example</p>
+          <p>support@Addis-Ecommerce.example</p>
           <p>+251 900 000 000</p>
           <p>Bole, Addis Ababa</p>
         </div>
       </div>
 
       <div className="footer-bottom">
-        <div className="container">© 2026 VoltMart. All rights reserved.</div>
+        <div className="container">© 2026 Addis-Ecommerce. All rights reserved.</div>
       </div>
     </footer>
   )
