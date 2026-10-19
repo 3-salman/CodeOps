@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# VoltMart
 
-## Getting Started
+An online shop for laptops and computers, built with Next.js (App Router).
+Prices are in ETB. Payment is on delivery.
 
-First, run the development server:
+**Live site:** _add your Vercel link here_
+**Code:** _add your GitHub link here_
+
+## Screenshots
+
+| | |
+|---|---|
+| ![Home](screenshots/home.png) Home | ![Products](screenshots/products.png) Products with search and categories |
+| ![Detail](screenshots/detail.png) Product detail | ![Orders](screenshots/orders.png) My orders with live status |
+
+## What it does
+
+- Browse products by category and search them (debounced)
+- Product pages with specs
+- Cart saved in the browser
+- Sign in and out with a cookie
+- Checkout (needs sign in) and "My orders" (only your own)
+- Cancel an order while it is still processing
+- Order status updates by itself every 5 seconds
+
+## Run it
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Demo users:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Email | Password |
+|---|---|
+| abel@shop.test | demo1234 |
+| sara@shop.test | demo1234 |
 
-## Learn More
+## Folders
 
-To learn more about Next.js, take a look at the following resources:
+```
+app/            pages and API routes
+  api/          signin, signout, orders, products
+  products/     list and [slug] detail
+  orders/       list and [id] detail
+components/     Header, Footer, cart, forms
+lib/            db.js, session.js, password.js, pricing.js, site.js
+data/           products, users, orders, sessions (JSON)
+middleware.js   first door check for /checkout and /orders
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Documents
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- [AUTH.md](AUTH.md) — sign in, the protection layers, three attacks
+- [DATA.md](DATA.md) — every query, where it runs and why
+- [PERF.md](PERF.md) — measured before and after
 
-## Deploy on Vercel
+## Discovery (search engines and sharing)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Page titles and descriptions with `generateMetadata`
+- Share cards (Open Graph) for home and each product
+- `sitemap.xml` (public pages only) and `robots.txt` (private pages blocked)
+- Product JSON-LD for search results
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Notes
+
+- Data is stored in JSON files, so it works locally. Hosting needs a database
+  instead (only `lib/db.js` would change).
+- There is no admin role on purpose. See AUTH.md.

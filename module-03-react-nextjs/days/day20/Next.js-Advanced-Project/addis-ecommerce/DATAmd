@@ -1,0 +1,49 @@
+# DATA.md — Where data comes from
+
+All data lives in JSON files in `data/`. Only `lib/db.js` reads or writes them,
+so every other file just calls its functions.
+
+| File | Holds |
+|---|---|
+| `data/products.json` | 28 laptops and computers |
+| `data/users.json` | users (passwords are hashed) |
+| `data/orders.json` | orders |
+| `data/sessions.json` | signed-in sessions |
+
+## Every query
+
+| # | Query | Where | Key / URL | Refresh rule | Why |
+|---|---|---|---|---|---|
+| 1 | Product list, product detail | Server (page) | `getProducts()`, `getProductBySlug()` | Fresh on every request | Public pages, good for SEO, no loading spinner |
+| 2 | Orders list, order detail | Server (page) | `getOrdersFor(session.id)`, `getOrderFor(session.id, id)` | Fresh on every request | Private data, always scoped to the signed-in user |
+| 3 | **Order status** (live) | Client, SWR | `/api/orders/[id]/status` | **Polled every 5 seconds**, stops when `delivered` or `cancelled` | The status changes while the user is watching |
+| 4 | **Product search** (live) | Client, SWR | `/api/products?q=...&category=...` | **Debounced 400 ms**, no polling | Avoids one request per keystroke |
+
+## How the two live queries start without a spinner
+
+Both are **seeded with server data**:
+- The page loads the data on the server and passes it as `initialProducts` /
+  the first status.
+- SWR uses it as `fallbackData`, so the first paint already has content.
+- Search only calls the API after the user types something different from the
+  starting search.
+
+## Writes
+
+| Action | Route | What changes |
+|---|---|---|
+| Place order | `POST /api/orders` | Adds an order, lowers stock |
+| Cancel order | `POST /api/orders/[id]/cancel` | Sets status `cancelled`, puts stock back |
+
+After a write, the page calls `router.refresh()` so the server data is read again.
+
+## Cart
+
+The cart is not in the database. It lives in React context and is saved in the
+browser's `localStorage`. At checkout only product ids and quantities are sent.
+
+## Known limit
+
+JSON files cannot be written on Vercel (read-only disk). Locally everything
+works. Before a real deployment only `lib/db.js` needs to change to a hosted
+store. No other file would change.

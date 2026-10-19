@@ -1,0 +1,5 @@
+[
+  { "name": "sara", "password": "demo123", "email": "sara.bekele@example.com", "phone": "+251 91 234 5678", "address": "Bole Road, Addis Ababa" },
+  { "name": "abel",  "password": "demo123", "email": "abel.tesfaye@example.com", "phone": "+251 92 345 6789", "address": "Piassa, Addis Ababa" },
+  { "name": "hana",  "password": "demo123", "email": "hana.girma@example.com",   "phone": "+251 93 456 7890", "address": "CMC, Addis Ababa" }
+]
